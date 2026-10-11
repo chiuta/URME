@@ -17,6 +17,7 @@ URME („O zi în straturile muntelui") este un ghid de citit, nu o aplicație d
 Verificate în cod:
 - Chenar vizibil „Siguranță în munte": vreme, echipament, 112, lipsa garanțiilor privind marcajul/starea traseului, limitele hărții și ale GPS-ului.
 - Hartă schematică SVG proprie a buclei (fără plăci de hartă externe), cu legendă; pe ecran îngust se derulează lateral.
+- Secțiune pliabilă „In English — safety and essentials for visitors” (sub chenarul de siguranță, `lang="en"`): traducerea fidelă a chenarului „Siguranță în munte”, a datelor de bază (distanță, durată, dificultate, sezon) și a listei „Ce iei cu tine”, fără informații noi; restul paginii rămâne în română.
 - Listă de echipament cu bife și contor („X din 9 pregătite"); bifele nu se salvează. Butonul „Copiază ce îmi mai trebuie" copiază în clipboard doar elementele nebifate.
 - Planificator de zi (secțiunea „Pornire"): pentru o dată și o oră de plecare calculează local răsăritul, apusul și amurgul civil (zona Colți, aprox. 45,38° N, 26,40° E, după Wikipedia, consultat la 11 octombrie 2026), în ora României (cu trecerea la ora de vară/iarnă), cea mai târzie plecare recomandată (6 h de traseu + 1 h rezervă) și marja față de apus pentru estimarea de 5–6 h din ghid; avertizează dacă revenirea ar fi după apus. Algoritm astronomic simplificat, verificat la 11 octombrie 2026 față de un calculator public pentru Buzău (diferențe de câteva minute, explicabile prin locație); nu ține cont de relief.
 - Navigare pe secțiuni cu evidențierea secțiunii curente; comutator zi/noapte (urmărește setarea sistemului la deschidere); stil de tipărire.
@@ -53,6 +54,9 @@ Verificate în cod:
 Descarcă `index.html` și deschide-l în browser; funcționează fără internet.
 
 ## Istoric / Changelog
+
+### 11 octombrie 2026 (a treia intrare)
+- Rezumat în engleză (siguranță, date de bază, echipament) pentru vizitatori care nu citesc românește; axe 0 violări cu secțiunea deschisă, în temă luminoasă și întunecată, la 1280 și 360 px.
 
 ### 11 octombrie 2026 (a doua intrare)
 - Planificator de zi (răsărit/apus/amurg civil, cea mai târzie plecare, marja față de apus) și buton „Copiază ce îmi mai trebuie" pentru lista de echipament.
