@@ -4,6 +4,8 @@ Ghid offline, într-un singur fișier HTML, pentru o drumeție circulară care p
 
 **Live:** https://chiuta.github.io/URME/
 
+**Ultima actualizare:** 11 octombrie 2026
+
 ![Captura de ecran](screenshot.png)
 
 ## Ce este
@@ -48,6 +50,12 @@ Verificate în cod:
 ## Rulare locală / offline
 
 Descarcă `index.html` și deschide-l în browser; funcționează fără internet.
+
+## Istoric / Changelog
+
+### 11 octombrie 2026
+- Programul și tariful organizatorului (Centrul de Artă Aluniș) au acum, în aplicație, mențiunea că nu au putut fi reverificate la 11 octombrie 2026 și că sezonul indicat (până la 1 octombrie) s-a încheiat.
+- Verificare: axe 0 violări, fără depășire orizontală la 360 px.
 
 ## Licență
 
