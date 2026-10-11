@@ -17,7 +17,8 @@ URME („O zi în straturile muntelui") este un ghid de citit, nu o aplicație d
 Verificate în cod:
 - Chenar vizibil „Siguranță în munte": vreme, echipament, 112, lipsa garanțiilor privind marcajul/starea traseului, limitele hărții și ale GPS-ului.
 - Hartă schematică SVG proprie a buclei (fără plăci de hartă externe), cu legendă; pe ecran îngust se derulează lateral.
-- Listă de echipament cu bife și contor („X din 9 pregătite"); bifele nu se salvează.
+- Listă de echipament cu bife și contor („X din 9 pregătite"); bifele nu se salvează. Butonul „Copiază ce îmi mai trebuie" copiază în clipboard doar elementele nebifate.
+- Planificator de zi (secțiunea „Pornire"): pentru o dată și o oră de plecare calculează local răsăritul, apusul și amurgul civil (zona Colți, aprox. 45,38° N, 26,40° E, după Wikipedia, consultat la 11 octombrie 2026), în ora României (cu trecerea la ora de vară/iarnă), cea mai târzie plecare recomandată (6 h de traseu + 1 h rezervă) și marja față de apus pentru estimarea de 5–6 h din ghid; avertizează dacă revenirea ar fi după apus. Algoritm astronomic simplificat, verificat la 11 octombrie 2026 față de un calculator public pentru Buzău (diferențe de câteva minute, explicabile prin locație); nu ține cont de relief.
 - Navigare pe secțiuni cu evidențierea secțiunii curente; comutator zi/noapte (urmărește setarea sistemului la deschidere); stil de tipărire.
 - Secțiuni pliabile (istoria minei, „Alte urme din jur", „De ce se numește URME").
 
@@ -53,6 +54,10 @@ Descarcă `index.html` și deschide-l în browser; funcționează fără interne
 
 ## Istoric / Changelog
 
+### 11 octombrie 2026 (a doua intrare)
+- Planificator de zi (răsărit/apus/amurg civil, cea mai târzie plecare, marja față de apus) și buton „Copiază ce îmi mai trebuie" pentru lista de echipament.
+- Corectat textul de rezervă „0 din 7 pregătite" (lista are 9 elemente).
+
 ### 11 octombrie 2026
 - Programul și tariful organizatorului (Centrul de Artă Aluniș) au acum, în aplicație, mențiunea că nu au putut fi reverificate la 11 octombrie 2026 și că sezonul indicat (până la 1 octombrie) s-a încheiat.
 - Verificare: axe 0 violări, fără depășire orizontală la 360 px.
@@ -67,4 +72,4 @@ Alexio — Alexandru-Ionuț Chiuță, contact: alexio@trom.tf
 
 ## English summary
 
-URME is a single-file, offline Romanian-language hiking guide for a ~11 km circular route near Aluniș and Colți (Buzău Mountains, Romania): forest, medicinal plants, amber, fossils and the rock-cut church of Aluniș. It is informational and unofficial, has a prominent safety notice, uses a schematic SVG map (not for navigation), no GPS, no storage and makes no network requests. License not yet declared.
+URME is a single-file, offline Romanian-language hiking guide for a ~11 km circular route near Aluniș and Colți (Buzău Mountains, Romania): forest, medicinal plants, amber, fossils and the rock-cut church of Aluniș. It is informational and unofficial, has a prominent safety notice, uses a schematic SVG map (not for navigation), no GPS, no storage and makes no network requests. It includes a local daylight planner (sunrise/sunset for the Colți area) and a copy-missing-gear button. License not yet declared.

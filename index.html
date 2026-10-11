@@ -2,7 +2,7 @@
 <html lang="ro">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-JeCKQei9L5pPW9bB3Kj5ZvpoVT5QV3PAgML8EiqmFlI='; style-src 'unsafe-inline'; img-src data:; font-src 'none'; connect-src 'none'; media-src 'none'; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-vLn7vy0HEDERAerXxXrWQ62U2Z2iCPFC7Hk9SO6/o1k='; style-src 'unsafe-inline'; img-src data:; font-src 'none'; connect-src 'none'; media-src 'none'; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
 <meta name="referrer" content="no-referrer">
@@ -39,6 +39,17 @@
   ul, ol { padding-left: 1.2em; }
   a { color: inherit; }
   button { font: inherit; }
+
+
+  /* ===== Planificator de zi / lista de echipament ===== */
+  .plan-fields { display: grid; grid-template-columns: auto 1fr; gap: 8px 12px; align-items: center; margin: 12px 0; }
+  .plan-fields input { font: inherit; padding: 6px 8px; border: 1px solid var(--line); border-radius: 8px; background: var(--bg-panel-2); color: var(--ink); min-width: 0; }
+  .plan-out { font-weight: 600; line-height: 1.55; }
+  .plan-out .warn { color: var(--warn); }
+  .small-note { font-size: .85em; color: var(--ink-soft); }
+  .mini-btn { font: inherit; font-size: .85em; padding: 4px 10px; margin-left: 8px; border: 1px solid var(--line); border-radius: 999px; background: var(--bg-panel-2); color: var(--ink); cursor: pointer; }
+  .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  @media (max-width: 480px) { .plan-fields { grid-template-columns: 1fr; } }
 
   /* ===== Theme tokens ===== */
   :root {
@@ -566,7 +577,7 @@
         <li><input type="checkbox" id="g8"><label for="g8">Haină impermeabilă și un strat călduros, chiar dacă vremea pare bună</label></li>
         <li><input type="checkbox" id="g9"><label for="g9">Trusă mică de prim ajutor și lanternă sau frontală</label></li>
       </ul>
-      <span class="checklist-progress" id="gearProgress">0 din 7 pregătite</span>
+      <span class="checklist-progress" id="gearProgress">0 din 9 pregătite</span> <button type="button" class="mini-btn" id="gearCopy" hidden>Copiază ce îmi mai trebuie</button><span class="sr-only" id="gearCopyMsg" role="status" aria-live="polite"></span>
     </div>
 
     <div class="rule-box">
@@ -578,6 +589,17 @@
         <li>Nu aprinde foc în pădure și nu lăsa gunoaie; poteca poate trece pe lângă proprietăți private — respectă gardurile și indicațiile localnicilor.</li>
         <li>Nu culegi nimic din ce nu poți identifica sigur — nici plantă, nici ciupercă, nici „piatră ciudată". Fotografia e mereu o variantă bună.</li>
       </ul>
+    </div>
+
+    <div class="rule-box" id="planificator">
+      <p class="eyebrow">Planificator de zi — lumina zilei</p>
+      <p>Alege data și ora de plecare: aplicația calculează local răsăritul, apusul și amurgul civil pentru zona Colți (aprox. 45,38° N, 26,40° E, după Wikipedia, consultat la 11 octombrie 2026), în ora României, și compară cu durata de 5–6 ore estimată în ghid.</p>
+      <div class="plan-fields">
+        <label for="planDate">Data</label><input type="date" id="planDate">
+        <label for="planStart">Ora de plecare (ora României)</label><input type="time" id="planStart" value="09:00">
+      </div>
+      <p class="plan-out" id="planOut" role="status" aria-live="polite"></p>
+      <p class="small-note">Calcul astronomic aproximativ (precizie de ordinul minutelor), fără relief: muntele și pădurea pot întuneca poteca mai devreme decât apusul. Durata de 5–6 ore (cu popasuri) este estimarea din ghid; popasurile lungi o pot depăși — nu garantează nimic. Verifică vremea și prognoza înainte de plecare.</p>
     </div>
 
     <p class="eyebrow" style="margin-top:2em;">Ce se schimbă în funcție de anotimp</p>
@@ -1077,6 +1099,92 @@
   }
   gearBoxes.forEach(function (b) { b.addEventListener('change', updateGear); });
   updateGear();
+
+  /* ---- Copiază ce lipsește din lista de echipament ---- */
+  var gearCopy = document.getElementById('gearCopy');
+  var gearCopyMsg = document.getElementById('gearCopyMsg');
+  gearCopy.hidden = false;
+  gearCopy.addEventListener('click', function () {
+    var missing = [];
+    gearBoxes.forEach(function (b) {
+      if (!b.checked) { var l = document.querySelector('label[for="' + b.id + '"]'); if (l) missing.push('- ' + l.textContent.trim()); }
+    });
+    var text = missing.length ? 'Mai am de pregătit (URME):\n' + missing.join('\n') : 'Tot echipamentul din listă este pregătit.';
+    function done(ok) { gearCopyMsg.textContent = ok ? 'Copiat în clipboard.' : 'Nu am putut copia; selectează și copiază manual lista.'; }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function () { done(true); }, function () { done(false); });
+    } else {
+      var ta = document.createElement('textarea'); ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+      document.body.appendChild(ta); ta.select(); var ok = false; try { ok = document.execCommand('copy'); } catch (e) {} ta.remove(); done(ok);
+    }
+  });
+
+  /* ---- Planificator de zi: răsărit/apus (algoritm NOAA simplificat), ora României ---- */
+  var LAT = 45.38, LON = 26.40; // comuna Colți (Wikipedia, 11.10.2026)
+  function rad(d) { return d * Math.PI / 180; }
+  function deg(r) { return r * 180 / Math.PI; }
+  function jdn(y, m, d) {
+    var a = Math.floor((14 - m) / 12), yy = y + 4800 - a, mm = m + 12 * a - 3;
+    return d + Math.floor((153 * mm + 2) / 5) + 365 * yy + Math.floor(yy / 4) - Math.floor(yy / 100) + Math.floor(yy / 400) - 32045;
+  }
+  // zenith: 90.833 = răsărit/apus; 96 = amurg civil. Întoarce minute UTC (răsărit, apus) sau null.
+  function sunEvents(y, m, d, zenith) {
+    var T = (jdn(y, m, d) - 2451545) / 36525;
+    var L0 = (280.46646 + T * (36000.76983 + T * 0.0003032)) % 360;
+    var M = 357.52911 + T * (35999.05029 - 0.0001537 * T);
+    var e = 0.016708634 - T * (0.000042037 + 0.0000001267 * T);
+    var C = Math.sin(rad(M)) * (1.914602 - T * (0.004817 + 0.000014 * T)) + Math.sin(rad(2 * M)) * (0.019993 - 0.000101 * T) + Math.sin(rad(3 * M)) * 0.000289;
+    var omega = 125.04 - 1934.136 * T;
+    var lam = L0 + C - 0.00569 - 0.00478 * Math.sin(rad(omega));
+    var eps = 23 + (26 + (21.448 - T * (46.815 + T * (0.00059 - T * 0.001813))) / 60) / 60 + 0.00256 * Math.cos(rad(omega));
+    var decl = Math.asin(Math.sin(rad(eps)) * Math.sin(rad(lam)));
+    var yv = Math.pow(Math.tan(rad(eps / 2)), 2);
+    var eq = 4 * deg(yv * Math.sin(2 * rad(L0)) - 2 * e * Math.sin(rad(M)) + 4 * e * yv * Math.sin(rad(M)) * Math.cos(2 * rad(L0)) - 0.5 * yv * yv * Math.sin(4 * rad(L0)) - 1.25 * e * e * Math.sin(2 * rad(M)));
+    var cosH = Math.cos(rad(zenith)) / (Math.cos(rad(LAT)) * Math.cos(decl)) - Math.tan(rad(LAT)) * Math.tan(decl);
+    if (cosH < -1 || cosH > 1) return null;
+    var ha = deg(Math.acos(cosH)), noon = 720 - 4 * LON - eq;
+    return { rise: noon - 4 * ha, set: noon + 4 * ha };
+  }
+  // UE: ora de vară de la ultima duminică din martie 01:00 UTC până la ultima duminică din octombrie 01:00 UTC
+  function lastSunday(y, month) { var d = new Date(Date.UTC(y, month + 1, 0)); return d.getUTCDate() - d.getUTCDay(); }
+  function roOffset(y, m, d, utcMin) {
+    var t = Date.UTC(y, m - 1, d) + utcMin * 60000;
+    var start = Date.UTC(y, 2, lastSunday(y, 2), 1), end = Date.UTC(y, 9, lastSunday(y, 9), 1);
+    return (t >= start && t < end) ? 180 : 120;
+  }
+  function hhmm(min) {
+    min = Math.round(min); var h = Math.floor(min / 60), m = min - h * 60;
+    return String(h).padStart(2, '0') + ':' + String(m).padStart(2, '0');
+  }
+  function dur(min) { min = Math.round(min); var h = Math.floor(min / 60), m = min % 60; return (h ? h + ' h ' : '') + m + ' min'; }
+  function margin(min) { return min >= 0 ? dur(min) : 'după apus cu ' + dur(-min); }
+  function todayLocalISO() {
+    var n = new Date(); return n.getFullYear() + '-' + String(n.getMonth() + 1).padStart(2, '0') + '-' + String(n.getDate()).padStart(2, '0');
+  }
+  var planDate = document.getElementById('planDate'), planStart = document.getElementById('planStart'), planOut = document.getElementById('planOut');
+  function renderPlan() {
+    var dm = /^(\d{4})-(\d{2})-(\d{2})$/.exec(planDate.value || ''), tm = /^(\d{2}):(\d{2})$/.exec(planStart.value || '');
+    if (!dm) { planOut.textContent = 'Alege o dată validă.'; return; }
+    var y = +dm[1], m = +dm[2], d = +dm[3];
+    var ev = sunEvents(y, m, d, 90.833), cv = sunEvents(y, m, d, 96);
+    if (!ev || !cv) { planOut.textContent = 'Nu s-a putut calcula pentru această dată.'; return; }
+    var off = roOffset(y, m, d, 720 - 4 * LON);
+    var rise = ev.rise + off, set = ev.set + off, dusk = cv.set + off;
+    var html = 'Răsărit ' + hhmm(rise) + ' · apus ' + hhmm(set) + ' · amurg civil până la ' + hhmm(dusk) + ' · zi de ' + dur(set - rise) + ' (ora României, UTC+' + off / 60 + ').';
+    var latest = set - 60 - 360;
+    html += '<br>Cea mai târzie plecare recomandată (6 h de traseu + 1 h rezervă înainte de apus): <strong>' + hhmm(latest) + '</strong>' + (latest < rise ? ' — mai devreme decât răsăritul: în această perioadă ziua e prea scurtă pentru bucla întreagă.' : '.');
+    if (tm) {
+      var start = +tm[1] * 60 + +tm[2], back1 = start + 300, back2 = start + 360;
+      html += '<br>Plecare la ' + hhmm(start) + ' → revenire estimată ' + hhmm(back1) + '–' + hhmm(back2) + '; marjă față de apus: ' + margin(set - back2) + ' (la 6 h) — ' + margin(set - back1) + ' (la 5 h).';
+      if (start < rise) html += '<br><span class="warn">Plecarea e înainte de răsărit: mergi pe întuneric.</span>';
+      else if (back2 > set) html += '<br><span class="warn">Atenție: la 6 h revii după apus. Pornește mai devreme sau scurtează traseul.</span>';
+      else if (set - back2 < 60) html += '<br><span class="warn">Atenție: marja față de apus e sub 1 oră.</span>';
+    }
+    planOut.innerHTML = html;
+  }
+  planDate.value = todayLocalISO();
+  planDate.addEventListener('input', renderPlan); planStart.addEventListener('input', renderPlan);
+  renderPlan();
 })();
 </script>
 </body>
