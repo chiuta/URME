@@ -4,7 +4,7 @@ Ghid offline, într-un singur fișier HTML, pentru o drumeție circulară care p
 
 **Live:** https://chiuta.github.io/URME/
 
-**Ultima actualizare:** 11 octombrie 2026
+**Versiune:** 1.0.0 · **Ultima actualizare:** 12 octombrie 2026
 
 ![Captura de ecran](screenshot.png)
 
@@ -54,6 +54,9 @@ Verificate în cod:
 Descarcă `index.html` și deschide-l în browser; funcționează fără internet.
 
 ## Istoric / Changelog
+
+### 12 octombrie 2026 (v1.0.0)
+- 1.0.0 — 2026-10-12: versiunea și data ultimei actualizări sunt afișate în aplicație
 
 ### 11 octombrie 2026 (a treia intrare)
 - Rezumat în engleză (siguranță, date de bază, echipament) pentru vizitatori care nu citesc românește; axe 0 violări cu secțiunea deschisă, în temă luminoasă și întunecată, la 1280 și 360 px.
