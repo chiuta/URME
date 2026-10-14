@@ -4,7 +4,7 @@ Ghid offline, într-un singur fișier HTML, pentru o drumeție circulară care p
 
 **Live:** https://chiuta.github.io/URME/
 
-**Versiune:** 1.0.0 · **Ultima actualizare:** 12 octombrie 2026
+**Versiune:** 1.1.0 · **Ultima actualizare:** 14 octombrie 2026
 
 ![Captura de ecran](screenshot.png)
 
@@ -18,10 +18,28 @@ Verificate în cod:
 - Chenar vizibil „Siguranță în munte": vreme, echipament, 112, lipsa garanțiilor privind marcajul/starea traseului, limitele hărții și ale GPS-ului.
 - Hartă schematică SVG proprie a buclei (fără plăci de hartă externe), cu legendă; pe ecran îngust se derulează lateral.
 - Secțiune pliabilă „In English — safety and essentials for visitors” (sub chenarul de siguranță, `lang="en"`): traducerea fidelă a chenarului „Siguranță în munte”, a datelor de bază (distanță, durată, dificultate, sezon) și a listei „Ce iei cu tine”, fără informații noi; restul paginii rămâne în română.
-- Listă de echipament cu bife și contor („X din 9 pregătite"); bifele nu se salvează. Butonul „Copiază ce îmi mai trebuie" copiază în clipboard doar elementele nebifate.
+- Listă de echipament cu bife și contor („X din 9 pregătite"); bifele se păstrează acum în browser (vezi „Funcții noi”). Butonul „Copiază ce îmi mai trebuie" copiază în clipboard doar elementele nebifate.
 - Planificator de zi (secțiunea „Pornire"): pentru o dată și o oră de plecare calculează local răsăritul, apusul și amurgul civil (zona Colți, aprox. 45,38° N, 26,40° E, după Wikipedia, consultat la 11 octombrie 2026), în ora României (cu trecerea la ora de vară/iarnă), cea mai târzie plecare recomandată (6 h de traseu + 1 h rezervă) și marja față de apus pentru estimarea de 5–6 h din ghid; avertizează dacă revenirea ar fi după apus. Algoritm astronomic simplificat, verificat la 11 octombrie 2026 față de un calculator public pentru Buzău (diferențe de câteva minute, explicabile prin locație); nu ține cont de relief.
 - Navigare pe secțiuni cu evidențierea secțiunii curente; comutator zi/noapte (urmărește setarea sistemului la deschidere); stil de tipărire.
 - Secțiuni pliabile (istoria minei, „Alte urme din jur", „De ce se numește URME").
+
+## Funcții noi (1.1.0)
+
+- **Harta cerului** (secțiunea „Noaptea”): alegi data și ora (ora României, cu trecerea la ora de vară/iarnă) și aplicația desenează cerul de deasupra zonei Colți–Aluniș (aprox. 45,38° N, 26,40° E): stele până la magnitudinea 5 (1627 din catalogul Hipparcos), figurile și denumirile românești ale constelațiilor, Soarele, Luna (cu faza desenată) și planetele Mercur–Saturn. Sub hartă apare un tabel cu altitudinea și azimutul corpurilor, faza Lunii, răsăritul și apusul ei și o indicație „cer întunecat” (Soare sub −18° și Lună sub orizont). Calculul se face local, cu efemeridele din `fff-kit` (erori măsurate: sub 3″ pentru Soare, Lună și planete față de JPL DE421/423; vezi `fff-kit/docs/ephem.md`).
+  - **Limite:** nu desenează Calea Lactee, norii, poluarea luminoasă sau relieful (muntele ridică orizontul real); lipsesc stelele mai slabe de magnitudinea 5 și planetele Uranus și Neptun (nu se văd cu ochiul liber). Harta este pentru planificare, nu pentru siguranță.
+- **Lista de echipament se păstrează** între vizite (`localStorage`, cheia `urme.gear`), la fel bifele „Figuri” și „Nume” ale hărții cerului (`urme.sky`). Poți face copie de siguranță `.fff.json` din fereastra „Transparență” (apasă versiunea din subsol).
+- **Fișă de teren tipărită** (secțiunea „Pornire”, butonul „Tipărește fișa de teren”): o pagină cu siguranța, 112, orele de lumină din planificator, lista de echipament cu bifele tale și un cod QR (generat local) către ghidul publicat. Fără JavaScript sau fără modulul QR, fișa lipsește / apare fără cod.
+- **Transparență** (apăsând versiunea din subsol): rețea (0 cereri externe), chei salvate, fișier cu SHA-256.
+
+Interfața rămâne **numai în română** (ghidul nu are sistem de limbi; rezumatul în engleză este neschimbat).
+
+## Kit „fff-kit”
+
+Module lipite în `index.html`: `core`, `label`, `bundle`, `qr`, `ephem`, `ephem-stars` (în total ~455 kB peste ghid). Fără ele ghidul rămâne complet funcțional (testat): harta cerului nu apare. Date și licențe ale catalogului stelar: `fff-kit/THIRD-PARTY.md` (Hipparcos/ESA, d3-celestial BSD-3-Clause, hipparcos-catalog MIT). `app.json` descrie rețeaua, permisiunile și SHA-256.
+
+## Teste
+
+`node tests/fff-r8.test.mjs` (Playwright, rețea blocată; 69 de verificări): Luna plină la 26 octombrie 2026 și Luna nouă la 2 august 2027, Soarele la apusul din planificator (algoritm NOAA independent) pe patru date, Polaris la altitudine ≈ latitudine, fusul orar vară/iarnă, persistența bifelor, pachet `.fff.json`, fișă și mod tipărire (PDF de o pagină), axe-core 0 violări (temă luminoasă și întunecată, 360 px, dialog), fără kit.
 
 ## Manual de utilizare
 
@@ -34,7 +52,7 @@ Verificate în cod:
 
 ## Confidențialitate și rețea
 
-- **Stocare:** nu folosește `localStorage`, `sessionStorage`, IndexedDB sau cookie-uri. Nimic nu se salvează.
+- **Stocare:** doar `localStorage`, local în browser: `urme.gear` (bifele din lista de echipament) și `urme.sky` (două preferințe ale hărții cerului). Nu folosește `sessionStorage`, IndexedDB sau cookie-uri; poți șterge datele din „Transparență”.
 - **Rețea:** nu face nicio cerere de rețea (fără `fetch`, scripturi, fonturi, imagini sau hărți externe). Politica CSP din pagină blochează conexiunile externe. Singurul link extern este `tabara.asfan.online`, care se deschide doar dacă apeși pe el.
 - **Permisiuni:** nu cere nicio permisiune (nu folosește geolocalizare, cameră sau microfon). Aplicația nu îți urmărește poziția.
 - Nu există cont, telemetrie sau analiză de trafic.
@@ -54,6 +72,9 @@ Verificate în cod:
 Descarcă `index.html` și deschide-l în browser; funcționează fără internet.
 
 ## Istoric / Changelog
+
+### 14 octombrie 2026 (v1.1.0)
+- Nou: harta cerului cu efemeride locale, lista de echipament salvată, fișă de teren tipărită cu QR, fereastra „Transparență” (fff-kit: core, label, bundle, qr, ephem, ephem-stars); `tests/fff-r8.test.mjs`. CSP: hash-ul scriptului recalculat, fără alte schimbări.
 
 ### 12 octombrie 2026 (v1.0.0)
 - 1.0.0 — 2026-10-12: versiunea și data ultimei actualizări sunt afișate în aplicație
@@ -79,4 +100,6 @@ Alexio — Alexandru-Ionuț Chiuță, contact: alexio@trom.tf
 
 ## English summary
 
-URME is a single-file, offline Romanian-language hiking guide for a ~11 km circular route near Aluniș and Colți (Buzău Mountains, Romania): forest, medicinal plants, amber, fossils and the rock-cut church of Aluniș. It is informational and unofficial, has a prominent safety notice, uses a schematic SVG map (not for navigation), no GPS, no storage and makes no network requests. It includes a local daylight planner (sunrise/sunset for the Colți area) and a copy-missing-gear button. License not yet declared.
+URME is a single-file, offline Romanian-language hiking guide for a ~11 km circular route near Aluniș and Colți (Buzău Mountains, Romania): forest, medicinal plants, amber, fossils and the rock-cut church of Aluniș. It is informational and unofficial, has a prominent safety notice, uses a schematic SVG map (not for navigation), no GPS and makes no network requests; since 1.1.0 it stores only the equipment checklist ticks and two sky-map preferences in localStorage. It includes a local daylight planner (sunrise/sunset for the Colți area) and a copy-missing-gear button. License not yet declared.
+
+New in 1.1.0: an offline sky chart for the Colți–Aluniș area (stars to magnitude 5, constellation figures, Sun, Moon with phase, planets Mercury–Saturn; local ephemerides), a persistent equipment checklist, a one-page printable field sheet with a QR code to the published guide, and the "Transparency" dialog. Romanian-only UI; not a navigation tool.
