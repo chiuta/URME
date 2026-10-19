@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 1.1.0 · **Zuletzt aktualisiert:** 2026-10-14
+**Version:** 1.2.0 · **Zuletzt aktualisiert:** 2026-10-19
+
+Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 Ein Offline-Führer in einer einzigen HTML-Datei für eine Rundwanderung ab Aluniș Retreat: Wald, Heilpflanzen, Bernstein, Fossilien und das Felsenensemble von Aluniș. Informativ und inoffiziell.
 
@@ -33,7 +35,7 @@ Im Code geprüft:
 - **Gedrucktes Feldblatt** (Abschnitt „Pornire“, Schaltfläche „Tipărește fișa de teren“ (Feldblatt drucken)): eine Seite mit Sicherheit, 112, den Lichtzeiten aus dem Planer, der Ausrüstungsliste mit deinen Häkchen und einem QR-Code (lokal erzeugt) zum veröffentlichten Führer. Ohne JavaScript oder ohne das QR-Modul fehlt das Blatt / erscheint es ohne Code.
 - **Transparenz** (durch Drücken der Version in der Fußzeile): Netzwerk (0 externe Anfragen), gespeicherte Schlüssel, Datei mit SHA-256.
 
-Die Oberfläche bleibt **nur auf Rumänisch** (der Führer hat kein Sprachsystem; die englische Zusammenfassung ist unverändert).
+Die Oberfläche hat 8 Sprachen (RO, EN, FR, IT, ES, PT, DE, HU); der lange Text des Führers bleibt auf Rumänisch, und die Übersetzungen außer Rumänisch sind automatisch und nicht von Muttersprachlern geprüft.
 
 ## Das Kit „fff-kit“
 

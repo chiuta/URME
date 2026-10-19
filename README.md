@@ -2,7 +2,9 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 1.1.0 · **Last updated:** 2026-10-14
+**Version:** 1.2.0 · **Last updated:** 2026-10-19
+
+Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 An offline guide, in a single HTML file, for a circular hike starting from Aluniș Retreat: forest, medicinal plants, amber, fossils and the Aluniș Rock-Cut Complex. Informational and unofficial.
 
@@ -33,7 +35,7 @@ Checked in the code:
 - **Printed field sheet** (the "Pornire" section, button "Tipărește fișa de teren" (Print the field sheet)): a page with safety, 112, the daylight hours from the planner, the equipment list with your check marks and a QR code (generated locally) to the published guide. Without JavaScript or without the QR module, the sheet is missing / appears without the code.
 - **Transparency** (by pressing the version in the footer): network (0 external requests), stored keys, file with SHA-256.
 
-The interface remains **in Romanian only** (the guide has no language system; the English summary is unchanged).
+The interface has 8 languages (RO, EN, FR, IT, ES, PT, DE, HU); the long guide text remains in Romanian, and the translations other than Romanian are automatic and not verified by native speakers.
 
 ## The "fff-kit" kit
 

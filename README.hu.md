@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 1.1.0 · **Utolsó frissítés:** 2026-10-14
+**Verzió:** 1.2.0 · **Utolsó frissítés:** 2026-10-19
+
+A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 Offline útmutató egyetlen HTML-fájlban egy körtúrához, amely az Aluniș Retreat-től indul: erdő, gyógynövények, borostyán, kövületek és az aluniși sziklaegyüttes. Tájékoztató jellegű és nem hivatalos.
 
@@ -33,7 +35,7 @@ A kódban ellenőrizve:
 - **Kinyomtatott terepi lap** („Pornire” szakasz, „Tipărește fișa de teren” (Terepi lap nyomtatása) gomb): egy oldal a biztonsággal, a 112-vel, a tervező fényidőpontjaival, a felszerelési listával a te jelöléseiddel, és egy QR-kóddal (helyben előállítva) a közzétett útmutatóra. JavaScript vagy a QR-modul nélkül a lap hiányzik / kód nélkül jelenik meg.
 - **Átláthatóság** (a verzió megnyomásával a láblécben): hálózat (0 külső kérés), tárolt kulcsok, fájl SHA-256 értékkel.
 
-A felület továbbra is **kizárólag román nyelvű** (az útmutatónak nincs nyelvi rendszere; az angol összefoglaló változatlan).
+A felület 8 nyelvű (RO, EN, FR, IT, ES, PT, DE, HU); az útmutató hosszú szövege románul marad, a romántól eltérő fordítások pedig gépiek, és anyanyelvi beszélők nem ellenőrizték őket.
 
 ## Az „fff-kit” készlet
 

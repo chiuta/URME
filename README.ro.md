@@ -2,7 +2,9 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 1.1.0 · **Ultima actualizare:** 2026-10-14
+**Versiune:** 1.2.0 · **Ultima actualizare:** 2026-10-19
+
+Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 Ghid offline, într-un singur fișier HTML, pentru o drumeție circulară care pornește de la Aluniș Retreat: pădure, plante de leac, chihlimbar, fosile și Ansamblul Rupestru Aluniș. Informativ și neoficial.
 
@@ -33,7 +35,7 @@ Verificate în cod:
 - **Fișă de teren tipărită** (secțiunea „Pornire”, butonul „Tipărește fișa de teren”): o pagină cu siguranța, 112, orele de lumină din planificator, lista de echipament cu bifele tale și un cod QR (generat local) către ghidul publicat. Fără JavaScript sau fără modulul QR, fișa lipsește / apare fără cod.
 - **Transparență** (apăsând versiunea din subsol): rețea (0 cereri externe), chei salvate, fișier cu SHA-256.
 
-Interfața rămâne **numai în română** (ghidul nu are sistem de limbi; rezumatul în engleză este neschimbat).
+Interfața are 8 limbi (RO, EN, FR, IT, ES, PT, DE, HU); textul lung al ghidului rămâne în română, iar traducerile în afară de română sunt automate și neverificate de vorbitori nativi.
 
 ## Kit „fff-kit”
 

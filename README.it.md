@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · **Italiano** · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versione:** 1.1.0 · **Ultimo aggiornamento:** 2026-10-14
+**Versione:** 1.2.0 · **Ultimo aggiornamento:** 2026-10-19
+
+Lingue dell'interfaccia: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 Guida offline, in un unico file HTML, per un'escursione ad anello con partenza da Aluniș Retreat: foresta, piante medicinali, ambra, fossili e il complesso rupestre di Aluniș. Informativa e non ufficiale.
 
@@ -33,7 +35,7 @@ Verificate nel codice:
 - **Scheda da campo stampata** (sezione «Pornire», pulsante «Tipărește fișa de teren» (Stampa la scheda da campo)): una pagina con sicurezza, 112, le ore di luce dal pianificatore, l'elenco dell'attrezzatura con le tue spunte e un codice QR (generato in locale) verso la guida pubblicata. Senza JavaScript o senza il modulo QR, la scheda manca / compare senza codice.
 - **Trasparenza** (premendo la versione nel piè di pagina): rete (0 richieste esterne), chiavi salvate, file con SHA-256.
 
-L'interfaccia resta **solo in rumeno** (la guida non ha un sistema di lingue; il riassunto in inglese è invariato).
+L'interfaccia ha 8 lingue (RO, EN, FR, IT, ES, PT, DE, HU); il testo lungo della guida resta in rumeno, e le traduzioni diverse dal rumeno sono automatiche e non verificate da madrelingua.
 
 ## Il kit «fff-kit»
 

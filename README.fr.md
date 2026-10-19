@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · **Français** · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version :** 1.1.0 · **Dernière mise à jour :** 2026-10-14
+**Version :** 1.2.0 · **Dernière mise à jour :** 2026-10-19
+
+Langues de l'interface : **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 Guide hors ligne, dans un seul fichier HTML, pour une randonnée en boucle au départ d'Aluniș Retreat : forêt, plantes médicinales, ambre, fossiles et l'ensemble rupestre d'Aluniș. Informatif et non officiel.
 
@@ -33,7 +35,7 @@ Vérifiées dans le code :
 - **Fiche de terrain imprimée** (section « Pornire », bouton « Tipărește fișa de teren » (Imprimer la fiche de terrain)) : une page avec la sécurité, le 112, les heures de lumière du planificateur, la liste d'équipement avec vos cases cochées et un code QR (généré localement) vers le guide publié. Sans JavaScript ou sans le module QR, la fiche est absente / apparaît sans le code.
 - **Transparence** (en appuyant sur la version dans le pied de page) : réseau (0 requête externe), clés enregistrées, fichier avec SHA-256.
 
-L'interface reste **uniquement en roumain** (le guide n'a pas de système de langues ; le résumé en anglais est inchangé).
+L'interface compte 8 langues (RO, EN, FR, IT, ES, PT, DE, HU) ; le long texte du guide reste en roumain, et les traductions autres que le roumain sont automatiques et non vérifiées par des locuteurs natifs.
 
 ## Le kit « fff-kit »
 
