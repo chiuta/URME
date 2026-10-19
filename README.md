@@ -1,100 +1,102 @@
-# URME — ghid de drumeție Aluniș–Colți (Munții Buzăului)
+# URME — Aluniș–Colți hiking guide (Buzău Mountains)
 
-Ghid offline, într-un singur fișier HTML, pentru o drumeție circulară care pornește de la Aluniș Retreat: pădure, plante de leac, chihlimbar, fosile și Ansamblul Rupestru Aluniș. Informativ și neoficial.
+**English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Live:** https://chiuta.github.io/URME/
+**Version:** 1.1.0 · **Last updated:** 2026-10-14
 
-**Versiune:** 1.1.0 · **Ultima actualizare:** 14 octombrie 2026
+An offline guide, in a single HTML file, for a circular hike starting from Aluniș Retreat: forest, medicinal plants, amber, fossils and the Aluniș Rock-Cut Complex. Informational and unofficial.
 
-![Captura de ecran](screenshot.png)
+**Live app:** https://chiuta.github.io/URME/
 
-## Ce este
+![Screenshot](screenshot.png)
 
-URME („O zi în straturile muntelui") este un ghid de citit, nu o aplicație de navigație. Descrie o buclă de aproximativ 11 km (estimare, nemăsurată cu GPS) și 5–6 ore, cu popasuri tematice: pădurea și viețuitoarele ei, plante de leac, chihlimbarul de la Colți, fosile și relief, Biserica din Piatră de la Aluniș și o secțiune despre cerul nopții. Pagina începe cu un chenar de siguranță și se termină cu o secțiune „Practic" (recapitulare, contacte publicate de organizator, surse).
+## What it is
 
-## Funcții
+URME ("A day in the layers of the mountain") is a guide to read, not a navigation app. It describes a loop of about 11 km (an estimate, not measured with GPS) and 5–6 hours, with thematic stops: the forest and its creatures, medicinal plants, the amber of Colți, fossils and relief, the Rock Church of Aluniș and a section on the night sky. The page begins with a safety box and ends with a "Practic" (Practical) section (recap, contacts published by the organizer, sources).
 
-Verificate în cod:
-- Chenar vizibil „Siguranță în munte": vreme, echipament, 112, lipsa garanțiilor privind marcajul/starea traseului, limitele hărții și ale GPS-ului.
-- Hartă schematică SVG proprie a buclei (fără plăci de hartă externe), cu legendă; pe ecran îngust se derulează lateral.
-- Secțiune pliabilă „In English — safety and essentials for visitors” (sub chenarul de siguranță, `lang="en"`): traducerea fidelă a chenarului „Siguranță în munte”, a datelor de bază (distanță, durată, dificultate, sezon) și a listei „Ce iei cu tine”, fără informații noi; restul paginii rămâne în română.
-- Listă de echipament cu bife și contor („X din 9 pregătite"); bifele se păstrează acum în browser (vezi „Funcții noi”). Butonul „Copiază ce îmi mai trebuie" copiază în clipboard doar elementele nebifate.
-- Planificator de zi (secțiunea „Pornire"): pentru o dată și o oră de plecare calculează local răsăritul, apusul și amurgul civil (zona Colți, aprox. 45,38° N, 26,40° E, după Wikipedia, consultat la 11 octombrie 2026), în ora României (cu trecerea la ora de vară/iarnă), cea mai târzie plecare recomandată (6 h de traseu + 1 h rezervă) și marja față de apus pentru estimarea de 5–6 h din ghid; avertizează dacă revenirea ar fi după apus. Algoritm astronomic simplificat, verificat la 11 octombrie 2026 față de un calculator public pentru Buzău (diferențe de câteva minute, explicabile prin locație); nu ține cont de relief.
-- Navigare pe secțiuni cu evidențierea secțiunii curente; comutator zi/noapte (urmărește setarea sistemului la deschidere); stil de tipărire.
-- Secțiuni pliabile (istoria minei, „Alte urme din jur", „De ce se numește URME").
+## Features
 
-## Funcții noi (1.1.0)
+Checked in the code:
+- Visible "Siguranță în munte" (Mountain safety) box: weather, equipment, 112, no guarantees about trail marking/condition, the limits of the map and of GPS.
+- Own schematic SVG map of the loop (no external map tiles), with a legend; on a narrow screen it scrolls sideways.
+- Collapsible section "In English — safety and essentials for visitors" (below the safety box, `lang="en"`): a faithful translation of the "Siguranță în munte" box, of the basic data (distance, duration, difficulty, season) and of the "Ce iei cu tine" (What to bring) list, without new information; the rest of the page stays in Romanian.
+- Equipment list with check marks and a counter ("X of 9 ready"); the check marks are now kept in the browser (see "New features"). The "Copiază ce îmi mai trebuie" (Copy what I still need) button copies only the unchecked items to the clipboard.
+- Day planner (the "Pornire" section): for a date and a departure time it computes locally the sunrise, sunset and civil dusk (Colți area, approx. 45.38° N, 26.40° E, according to Wikipedia, accessed on 11 October 2026), in Romanian time (with the summer/winter time change), the latest recommended departure (6 h of trail + 1 h reserve) and the margin before sunset for the guide's 5–6 h estimate; it warns if the return would be after sunset. A simplified astronomical algorithm, checked on 11 October 2026 against a public calculator for Buzău (differences of a few minutes, explainable by location); it does not take relief into account.
+- Navigation by sections with the current section highlighted; day/night toggle (follows the system setting on opening); print style.
+- Collapsible sections (history of the mine, "Alte urme din jur" (Other traces nearby), "De ce se numește URME" (Why it is called URME)).
 
-- **Harta cerului** (secțiunea „Noaptea”): alegi data și ora (ora României, cu trecerea la ora de vară/iarnă) și aplicația desenează cerul de deasupra zonei Colți–Aluniș (aprox. 45,38° N, 26,40° E): stele până la magnitudinea 5 (1627 din catalogul Hipparcos), figurile și denumirile românești ale constelațiilor, Soarele, Luna (cu faza desenată) și planetele Mercur–Saturn. Sub hartă apare un tabel cu altitudinea și azimutul corpurilor, faza Lunii, răsăritul și apusul ei și o indicație „cer întunecat” (Soare sub −18° și Lună sub orizont). Calculul se face local, cu efemeridele din `fff-kit` (erori măsurate: sub 3″ pentru Soare, Lună și planete față de JPL DE421/423; vezi `fff-kit/docs/ephem.md`).
-  - **Limite:** nu desenează Calea Lactee, norii, poluarea luminoasă sau relieful (muntele ridică orizontul real); lipsesc stelele mai slabe de magnitudinea 5 și planetele Uranus și Neptun (nu se văd cu ochiul liber). Harta este pentru planificare, nu pentru siguranță.
-- **Lista de echipament se păstrează** între vizite (`localStorage`, cheia `urme.gear`), la fel bifele „Figuri” și „Nume” ale hărții cerului (`urme.sky`). Poți face copie de siguranță `.fff.json` din fereastra „Transparență” (apasă versiunea din subsol).
-- **Fișă de teren tipărită** (secțiunea „Pornire”, butonul „Tipărește fișa de teren”): o pagină cu siguranța, 112, orele de lumină din planificator, lista de echipament cu bifele tale și un cod QR (generat local) către ghidul publicat. Fără JavaScript sau fără modulul QR, fișa lipsește / apare fără cod.
-- **Transparență** (apăsând versiunea din subsol): rețea (0 cereri externe), chei salvate, fișier cu SHA-256.
+## New features (1.1.0)
 
-Interfața rămâne **numai în română** (ghidul nu are sistem de limbi; rezumatul în engleză este neschimbat).
+- **Sky chart** (the "Noaptea" (Night) section): you choose the date and time (Romanian time, with the summer/winter time change) and the app draws the sky above the Colți–Aluniș area (approx. 45.38° N, 26.40° E): stars down to magnitude 5 (1627 from the Hipparcos catalog), the constellation figures and Romanian names, the Sun, the Moon (with the phase drawn) and the planets Mercury–Saturn. Below the chart a table appears with the altitude and azimuth of the bodies, the Moon's phase, its rising and setting and a "dark sky" indication (Sun below −18° and Moon below the horizon). The computation is done locally, with the ephemerides from `fff-kit` (measured errors: under 3″ for the Sun, Moon and planets against JPL DE421/423; see `fff-kit/docs/ephem.md`).
+  - **Limits:** it does not draw the Milky Way, clouds, light pollution or relief (the mountain raises the real horizon); stars fainter than magnitude 5 and the planets Uranus and Neptune (not visible to the naked eye) are missing. The chart is for planning, not for safety.
+- **The equipment list is kept** between visits (`localStorage`, key `urme.gear`), as are the "Figuri" (Figures) and "Nume" (Names) check marks of the sky chart (`urme.sky`). You can make a `.fff.json` backup from the "Transparență" (Transparency) window (press the version in the footer).
+- **Printed field sheet** (the "Pornire" section, button "Tipărește fișa de teren" (Print the field sheet)): a page with safety, 112, the daylight hours from the planner, the equipment list with your check marks and a QR code (generated locally) to the published guide. Without JavaScript or without the QR module, the sheet is missing / appears without the code.
+- **Transparency** (by pressing the version in the footer): network (0 external requests), stored keys, file with SHA-256.
 
-## Kit „fff-kit”
+The interface remains **in Romanian only** (the guide has no language system; the English summary is unchanged).
 
-Module lipite în `index.html`: `core`, `label`, `bundle`, `qr`, `ephem`, `ephem-stars` (în total ~455 kB peste ghid). Fără ele ghidul rămâne complet funcțional (testat): harta cerului nu apare. Date și licențe ale catalogului stelar: `fff-kit/THIRD-PARTY.md` (Hipparcos/ESA, d3-celestial BSD-3-Clause, hipparcos-catalog MIT). `app.json` descrie rețeaua, permisiunile și SHA-256.
+## The "fff-kit" kit
 
-## Teste
+Modules pasted into `index.html`: `core`, `label`, `bundle`, `qr`, `ephem`, `ephem-stars` (about 455 kB in total on top of the guide). Without them the guide remains fully functional (tested): the sky chart does not appear. Data and licenses of the star catalog: `fff-kit/THIRD-PARTY.md` (Hipparcos/ESA, d3-celestial BSD-3-Clause, hipparcos-catalog MIT). `app.json` describes the network, the permissions and the SHA-256.
 
-`node tests/fff-r8.test.mjs` (Playwright, rețea blocată; 69 de verificări): Luna plină la 26 octombrie 2026 și Luna nouă la 2 august 2027, Soarele la apusul din planificator (algoritm NOAA independent) pe patru date, Polaris la altitudine ≈ latitudine, fusul orar vară/iarnă, persistența bifelor, pachet `.fff.json`, fișă și mod tipărire (PDF de o pagină), axe-core 0 violări (temă luminoasă și întunecată, 360 px, dialog), fără kit.
+## Tests
 
-## Manual de utilizare
+`node tests/fff-r8.test.mjs` (Playwright, network blocked; 69 checks): the full Moon on 26 October 2026 and the new Moon on 2 August 2027, the Sun at sunset in the planner (independent NOAA algorithm) on four dates, Polaris at an altitude ≈ latitude, the summer/winter time zone, persistence of the check marks, `.fff.json` bundle, the sheet and print mode (one-page PDF), axe-core 0 violations (light and dark theme, 360 px, dialog), without the kit.
 
-1. Citește chenarul „Siguranță în munte" înainte de a plănui drumeția.
-2. Parcurge „Pornire" (ce iei cu tine, reguli, anotimpuri) și bifează lista de echipament.
-3. Consultă „Hartă" pentru ordinea popasurilor; nu o folosi pentru navigație.
-4. Citește etapele (Plante, Chihlimbar, Fosile, Aluniș, Noaptea) în ordinea dorită, din bara de navigare.
-5. În „Practic" găsești recapitularea și datele de contact publicate de organizator (verifică-le direct).
-6. Poți tipări pagina; comutatorul zi/noapte e în colțul din dreapta sus.
+## User guide
 
-## Confidențialitate și rețea
+1. Read the "Siguranță în munte" box before planning the hike.
+2. Go through "Pornire" (what to bring, rules, seasons) and tick the equipment list.
+3. Consult "Hartă" (Map) for the order of the stops; do not use it for navigation.
+4. Read the stages (Plante, Chihlimbar, Fosile, Aluniș, Noaptea) in the order you wish, from the navigation bar.
+5. In "Practic" you find the recap and the contact details published by the organizer (check them directly).
+6. You can print the page; the day/night toggle is in the top right corner.
 
-- **Stocare:** doar `localStorage`, local în browser: `urme.gear` (bifele din lista de echipament) și `urme.sky` (două preferințe ale hărții cerului). Nu folosește `sessionStorage`, IndexedDB sau cookie-uri; poți șterge datele din „Transparență”.
-- **Rețea:** nu face nicio cerere de rețea (fără `fetch`, scripturi, fonturi, imagini sau hărți externe). Politica CSP din pagină blochează conexiunile externe. Singurul link extern este `tabara.asfan.online`, care se deschide doar dacă apeși pe el.
-- **Permisiuni:** nu cere nicio permisiune (nu folosește geolocalizare, cameră sau microfon). Aplicația nu îți urmărește poziția.
-- Nu există cont, telemetrie sau analiză de trafic.
+## Privacy and network
 
-## Limite și avertismente
+- **Storage:** only `localStorage`, local to the browser: `urme.gear` (the equipment list check marks) and `urme.sky` (two sky chart preferences). It does not use `sessionStorage`, IndexedDB or cookies; you can delete the data from "Transparență".
+- **Network:** it makes no network requests (no `fetch`, scripts, fonts, images or external maps). The CSP in the page blocks external connections. The only external link is `tabara.asfan.online`, which opens only if you click it.
+- **Permissions:** it requests no permissions (it does not use geolocation, camera or microphone). The app does not track your position.
+- There is no account, telemetry or traffic analytics.
 
-- Ghid informativ, **neoficial**; nu garantează că poteca este marcată, deschisă sau practicabilă și nu înlocuiește harta topografică, ghidul local sau Salvamontul. În caz de urgență: **112**.
-- Hartă schematică; distanțele, duratele și altitudinile (~500–650 m) sunt orientative și nu au fost măsurate cu GPS de către autor.
-- Plantele de leac sunt prezentate din tradiția populară, cu rol educativ; **nu sunt sfat medical**. Nu consuma plante sau ciuperci pe care nu le poți identifica sigur; la orice utilizare terapeutică cere părerea unui medic sau farmacist.
-- Zona dintre Colți și Aluniș include o arie naturală protejată; în interiorul ei extragerea chihlimbarului sau a fosilelor este interzisă.
-- Unele date istorice (anii bisericii, dimensiuni, mina de chihlimbar, donația din 1578) provin din tradiție sau surse locale și diferă între surse; sunt marcate ca neverificate în text.
-- Datele de contact, programul și tarifele organizatorului (Centrul de Artă Aluniș) sunt cele publicate de acesta și pot fi învechite. Ghidul nu este realizat de organizator.
-- Secțiunea despre tabăra ASFAN reflectă perspectiva organizatorilor; fenomenele aerospațiale neidentificate nu au o explicație științifică confirmată.
+## Limits and warnings
 
-## Rulare locală / offline
+- An informational, **unofficial** guide; it does not guarantee that the trail is marked, open or passable and does not replace the topographic map, the local guide or the mountain rescue service (Salvamont). In an emergency: **112**.
+- A schematic map; the distances, durations and altitudes (~500–650 m) are indicative and were not measured with GPS by the author.
+- Medicinal plants are presented from folk tradition, for educational purposes; **they are not medical advice**. Do not consume plants or mushrooms that you cannot identify with certainty; for any therapeutic use, ask a doctor or pharmacist.
+- The area between Colți and Aluniș includes a protected natural area; inside it, extracting amber or fossils is forbidden.
+- Some historical data (the years of the church, dimensions, the amber mine, the donation of 1578) come from tradition or local sources and differ between sources; they are marked as unverified in the text.
+- The organizer's (Centrul de Artă Aluniș) contact details, schedule and fees are those published by the organizer and may be outdated. The guide is not made by the organizer.
+- The section about the ASFAN camp reflects the organizers' perspective; unidentified aerospace phenomena have no confirmed scientific explanation.
 
-Descarcă `index.html` și deschide-l în browser; funcționează fără internet.
+## Running locally / offline
 
-## Istoric / Changelog
+Download `index.html` and open it in a browser; it works without internet.
 
-### 14 octombrie 2026 (v1.1.0)
-- Nou: harta cerului cu efemeride locale, lista de echipament salvată, fișă de teren tipărită cu QR, fereastra „Transparență” (fff-kit: core, label, bundle, qr, ephem, ephem-stars); `tests/fff-r8.test.mjs`. CSP: hash-ul scriptului recalculat, fără alte schimbări.
+## History / Changelog
 
-### 12 octombrie 2026 (v1.0.0)
-- 1.0.0 — 2026-10-12: versiunea și data ultimei actualizări sunt afișate în aplicație
+### 14 October 2026 (v1.1.0)
+- New: sky chart with local ephemerides, saved equipment list, printed field sheet with QR, the "Transparență" window (fff-kit: core, label, bundle, qr, ephem, ephem-stars); `tests/fff-r8.test.mjs`. CSP: the script hash recomputed, no other changes.
 
-### 11 octombrie 2026 (a treia intrare)
-- Rezumat în engleză (siguranță, date de bază, echipament) pentru vizitatori care nu citesc românește; axe 0 violări cu secțiunea deschisă, în temă luminoasă și întunecată, la 1280 și 360 px.
+### 12 October 2026 (v1.0.0)
+- 1.0.0 — 2026-10-12: the version and the date of the last update are shown in the app
 
-### 11 octombrie 2026 (a doua intrare)
-- Planificator de zi (răsărit/apus/amurg civil, cea mai târzie plecare, marja față de apus) și buton „Copiază ce îmi mai trebuie" pentru lista de echipament.
-- Corectat textul de rezervă „0 din 7 pregătite" (lista are 9 elemente).
+### 11 October 2026 (third entry)
+- English summary (safety, basic data, equipment) for visitors who do not read Romanian; axe 0 violations with the section open, in light and dark theme, at 1280 and 360 px.
 
-### 11 octombrie 2026
-- Programul și tariful organizatorului (Centrul de Artă Aluniș) au acum, în aplicație, mențiunea că nu au putut fi reverificate la 11 octombrie 2026 și că sezonul indicat (până la 1 octombrie) s-a încheiat.
-- Verificare: axe 0 violări, fără depășire orizontală la 360 px.
+### 11 October 2026 (second entry)
+- Day planner (sunrise/sunset/civil dusk, latest departure, margin before sunset) and a "Copiază ce îmi mai trebuie" button for the equipment list.
+- Fixed the fallback text "0 din 7 pregătite" (0 of 7 ready) (the list has 9 items).
 
-## Licență
+### 11 October 2026
+- The organizer's (Centrul de Artă Aluniș) schedule and fee now carry, in the app, a notice that they could not be rechecked on 11 October 2026 and that the indicated season (until 1 October) has ended.
+- Verification: axe 0 violations, no horizontal overflow at 360 px.
 
-MIT — vezi fișierul `LICENSE`.
+## License
 
-## Autor
+MIT — see the `LICENSE` file.
+
+## Author
 
 Alexio — Alexandru-Ionuț Chiuță, contact: alexio@trom.tf
 
