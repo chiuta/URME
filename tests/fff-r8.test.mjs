@@ -7,7 +7,7 @@ const AXE = process.env.FFF_AXE || '/tmp/claude-0/-home-claude/78529928-3825-51c
 let ok = 0, bad = 0; const t = (n, c, x) => { if (c) { ok++; console.log('  ok  ', n); } else { bad++; console.log('  FAIL', n, x ?? ''); } };
 const b = await chromium.launch({executablePath: '/opt/pw-browsers/chromium', args: ['--no-sandbox']});
 async function mk(w = 1280, h = 800, scheme = 'light') {
-  const ctx = await b.newContext({viewport: {width: w, height: h}, colorScheme: scheme, acceptDownloads: true});
+  const ctx = await b.newContext({viewport: {width: w, height: h}, colorScheme: scheme, acceptDownloads: true, locale: 'ro-RO'});
   const net = []; await ctx.route(/^https?:/, r => { net.push(r.request().url()); r.abort(); });
   const p = await ctx.newPage(); const errs = []; p.on('pageerror', e => errs.push(e.message)); p.on('console', m => { if (m.type() === 'error' || /Content Security Policy/.test(m.text())) errs.push(m.text()); });
   return {ctx, p, errs, net};
