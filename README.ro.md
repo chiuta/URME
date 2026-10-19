@@ -102,8 +102,8 @@ MIT — vezi fișierul `LICENSE`.
 
 Alexio — Alexandru-Ionuț Chiuță, contact: alexio@trom.tf
 
-## English summary
+## Rezumat
 
-URME is a single-file, offline Romanian-language hiking guide for a ~11 km circular route near Aluniș and Colți (Buzău Mountains, Romania): forest, medicinal plants, amber, fossils and the rock-cut church of Aluniș. It is informational and unofficial, has a prominent safety notice, uses a schematic SVG map (not for navigation), no GPS and makes no network requests; since 1.1.0 it stores only the equipment checklist ticks and two sky-map preferences in localStorage. It includes a local daylight planner (sunrise/sunset for the Colți area) and a copy-missing-gear button. Licensed under MIT.
+URME este un ghid de drumeție offline într-un singur fișier, în limba română, pentru un traseu circular de ~11 km lângă Aluniș și Colți (Munții Buzăului, România): pădure, plante medicinale, chihlimbar, fosile și biserica rupestră de la Aluniș. Este informativ și neoficial, are o notă de siguranță vizibilă, folosește o hartă schematică SVG (nu pentru navigație), fără GPS, și nu face cereri de rețea; din 1.1.0 stochează în localStorage doar bifările listei de echipament și două preferințe ale hărții cerului. Include un planificator local de lumină (răsărit/apus pentru zona Colți) și un buton de copiere a echipamentului lipsă. Licență MIT.
 
-New in 1.1.0: an offline sky chart for the Colți–Aluniș area (stars to magnitude 5, constellation figures, Sun, Moon with phase, planets Mercury–Saturn; local ephemerides), a persistent equipment checklist, a one-page printable field sheet with a QR code to the published guide, and the "Transparency" dialog. Romanian-only UI; not a navigation tool.
+Noutăți în 1.1.0: o hartă offline a cerului pentru zona Colți–Aluniș (stele până la magnitudinea 5, figuri de constelații, Soare, Lună cu fază, planetele Mercur–Saturn; efemeride locale), o listă persistentă de echipament, o fișă de teren tipăribilă pe o pagină, cu cod QR către ghidul publicat, și dialogul „Transparență”. Interfață doar în română; nu este un instrument de navigație.
