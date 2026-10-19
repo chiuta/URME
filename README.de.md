@@ -102,8 +102,8 @@ MIT — siehe die Datei `LICENSE`.
 
 Alexio — Alexandru-Ionuț Chiuță, Kontakt: alexio@trom.tf
 
-## English summary
+## Zusammenfassung
 
-URME is a single-file, offline Romanian-language hiking guide for a ~11 km circular route near Aluniș and Colți (Buzău Mountains, Romania): forest, medicinal plants, amber, fossils and the rock-cut church of Aluniș. It is informational and unofficial, has a prominent safety notice, uses a schematic SVG map (not for navigation), no GPS and makes no network requests; since 1.1.0 it stores only the equipment checklist ticks and two sky-map preferences in localStorage. It includes a local daylight planner (sunrise/sunset for the Colți area) and a copy-missing-gear button. Licensed under MIT.
+URME ist ein rumänischsprachiger Offline-Wanderführer in einer einzigen Datei für eine etwa 11 km lange Rundwanderung bei Aluniș und Colți (Buzău-Gebirge, Rumänien): Wald, Heilpflanzen, Bernstein, Fossilien und die Felsenkirche von Aluniș. Er ist informativ und inoffiziell, enthält einen deutlichen Sicherheitshinweis, nutzt eine schematische SVG-Karte (nicht zur Navigation), kein GPS und stellt keine Netzwerkanfragen; seit 1.1.0 speichert er nur die Häkchen der Ausrüstungs-Checkliste und zwei Einstellungen der Sternkarte in localStorage. Er enthält einen lokalen Tageslichtplaner (Sonnenaufgang/-untergang für die Gegend um Colți) und eine Schaltfläche zum Kopieren der fehlenden Ausrüstung. MIT-lizenziert.
 
-New in 1.1.0: an offline sky chart for the Colți–Aluniș area (stars to magnitude 5, constellation figures, Sun, Moon with phase, planets Mercury–Saturn; local ephemerides), a persistent equipment checklist, a one-page printable field sheet with a QR code to the published guide, and the "Transparency" dialog. Romanian-only UI; not a navigation tool.
+Neu in 1.1.0: eine Offline-Sternkarte für die Gegend Colți–Aluniș (Sterne bis Größenklasse 5, Sternbildfiguren, Sonne, Mond mit Phase, Planeten Merkur–Saturn; lokale Ephemeriden), eine dauerhafte Ausrüstungs-Checkliste, ein einseitiges druckbares Feldblatt mit QR-Code zum veröffentlichten Führer und der Dialog „Transparenz“. Oberfläche nur auf Rumänisch; kein Navigationswerkzeug.

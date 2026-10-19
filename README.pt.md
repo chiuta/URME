@@ -102,8 +102,8 @@ MIT — ver o ficheiro `LICENSE`.
 
 Alexio — Alexandru-Ionuț Chiuță, contacto: alexio@trom.tf
 
-## English summary
+## Resumo
 
-URME is a single-file, offline Romanian-language hiking guide for a ~11 km circular route near Aluniș and Colți (Buzău Mountains, Romania): forest, medicinal plants, amber, fossils and the rock-cut church of Aluniș. It is informational and unofficial, has a prominent safety notice, uses a schematic SVG map (not for navigation), no GPS and makes no network requests; since 1.1.0 it stores only the equipment checklist ticks and two sky-map preferences in localStorage. It includes a local daylight planner (sunrise/sunset for the Colți area) and a copy-missing-gear button. Licensed under MIT.
+O URME é um guia de caminhada offline em romeno, num único ficheiro, para um percurso circular de cerca de 11 km perto de Aluniș e Colți (Montes Buzău, Roménia): floresta, plantas medicinais, âmbar, fósseis e a igreja escavada na rocha de Aluniș. É informativo e não oficial, tem um aviso de segurança destacado, usa um mapa SVG esquemático (não serve para navegação), não usa GPS e não faz pedidos de rede; desde a 1.1.0 guarda apenas as marcas da lista de equipamento e duas preferências do mapa celeste em localStorage. Inclui um planeador local de luz do dia (nascer/pôr do sol para a zona de Colți) e um botão para copiar o equipamento em falta. Licenciado sob MIT.
 
-New in 1.1.0: an offline sky chart for the Colți–Aluniș area (stars to magnitude 5, constellation figures, Sun, Moon with phase, planets Mercury–Saturn; local ephemerides), a persistent equipment checklist, a one-page printable field sheet with a QR code to the published guide, and the "Transparency" dialog. Romanian-only UI; not a navigation tool.
+Novidades na 1.1.0: uma carta celeste offline para a zona Colți–Aluniș (estrelas até à magnitude 5, figuras de constelações, Sol, Lua com fase, planetas de Mercúrio a Saturno; efemérides locais), uma lista de equipamento persistente, uma ficha de campo imprimível de uma página com código QR para o guia publicado e a caixa de diálogo «Transparência». Interface apenas em romeno; não é uma ferramenta de navegação.

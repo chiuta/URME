@@ -102,8 +102,9 @@ MIT — voir le fichier `LICENSE`.
 
 Alexio — Alexandru-Ionuț Chiuță, contact : alexio@trom.tf
 
-## English summary
+## Résumé
 
-URME is a single-file, offline Romanian-language hiking guide for a ~11 km circular route near Aluniș and Colți (Buzău Mountains, Romania): forest, medicinal plants, amber, fossils and the rock-cut church of Aluniș. It is informational and unofficial, has a prominent safety notice, uses a schematic SVG map (not for navigation), no GPS and makes no network requests; since 1.1.0 it stores only the equipment checklist ticks and two sky-map preferences in localStorage. It includes a local daylight planner (sunrise/sunset for the Colți area) and a copy-missing-gear button. Licensed under MIT.
+URME est un guide de randonnée hors ligne en roumain, en un seul fichier, pour un circuit d'environ 11 km près d'Aluniș et de Colți (monts Buzău, Roumanie) : forêt, plantes médicinales, ambre, fossiles et l'église rupestre d'Aluniș. Il est informatif et non officiel, comporte un avertissement de sécurité bien visible, utilise une carte SVG schématique (pas pour la navigation), pas de GPS, et n'effectue aucune requête réseau ; depuis la 1.1.0, il ne stocke dans localStorage que les cases cochées de la liste d'équipement et deux préférences de la carte du ciel. Il comprend un planificateur local de lumière du jour (lever/coucher du Soleil pour la région de Colți) et un bouton de copie du matériel manquant. Sous licence MIT.
 
-New in 1.1.0: an offline sky chart for the Colți–Aluniș area (stars to magnitude 5, constellation figures, Sun, Moon with phase, planets Mercury–Saturn; local ephemerides), a persistent equipment checklist, a one-page printable field sheet with a QR code to the published guide, and the "Transparency" dialog. Romanian-only UI; not a navigation tool.
+Nouveau dans la 1.1.0 : une carte du ciel hors ligne pour la région Colți–Aluniș (étoiles jusqu'à la magnitude 5, figures des constellations, Soleil, Lune avec phase, planètes de Mercure à Saturne ; éphémérides locales), une liste d'équipement persistante, une fiche de terrain imprimable d'une page avec un code QR vers le guide publié, et la boîte de dialogue « Transparence ». Interface uniquement en roumain ; ce n'est pas un outil de navigation.
+
