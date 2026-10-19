@@ -11,9 +11,12 @@
     "serviceWorker",
     "localStorage"
   ],
-  "storageKeys": [],
-  "sizeBytes": 553250,
-  "sha256": "460c902c1ebe2197ac50c63d05a8300abaa66fd659ed308e845dbc7d7d38df86",
+  "storageKeys": [
+    "urme.gear",
+    "urme.sky"
+  ],
+  "sizeBytes": 553908,
+  "sha256": "075a4fb993804bfb6b2e1db9eaf3fa57d12a2aed1110af57903d3efda18c86ff",
   "csp": {
     "present": true,
     "directives": {
@@ -52,7 +55,7 @@
     ]
   },
   "kit": {
-    "version": "1.0.0",
+    "version": "1.1.1",
     "modules": [
       "core",
       "label",
