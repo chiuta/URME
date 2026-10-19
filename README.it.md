@@ -10,7 +10,7 @@ Guida offline, in un unico file HTML, per un'escursione ad anello con partenza d
 
 **App online:** https://chiuta.github.io/URME/
 
-![Schermata](screenshot.png)
+![Schermata](screenshot.it.png)
 
 ## Che cos'è
 

@@ -10,7 +10,7 @@ Offline útmutató egyetlen HTML-fájlban egy körtúrához, amely az Aluniș Re
 
 **Online alkalmazás:** https://chiuta.github.io/URME/
 
-![Képernyőkép](screenshot.png)
+![Képernyőkép](screenshot.hu.png)
 
 ## Mi ez
 

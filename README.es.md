@@ -10,7 +10,7 @@ Guía sin conexión, en un único archivo HTML, para una excursión circular que
 
 **Aplicación en línea:** https://chiuta.github.io/URME/
 
-![Captura de pantalla](screenshot.png)
+![Captura de pantalla](screenshot.es.png)
 
 ## Qué es
 

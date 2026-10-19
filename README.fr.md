@@ -10,7 +10,7 @@ Guide hors ligne, dans un seul fichier HTML, pour une randonnée en boucle au d�
 
 **Application en ligne :** https://chiuta.github.io/URME/
 
-![Capture d'écran](screenshot.png)
+![Capture d'écran](screenshot.fr.png)
 
 ## Présentation
 

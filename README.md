@@ -10,7 +10,7 @@ An offline guide, in a single HTML file, for a circular hike starting from Aluni
 
 **Live app:** https://chiuta.github.io/URME/
 
-![Screenshot](screenshot.png)
+![Screenshot](screenshot.en.png)
 
 ## What it is
 

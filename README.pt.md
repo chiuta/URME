@@ -10,7 +10,7 @@ Guia offline, num único ficheiro HTML, para uma caminhada circular com partida 
 
 **Aplicação online:** https://chiuta.github.io/URME/
 
-![Captura de ecrã](screenshot.png)
+![Captura de ecrã](screenshot.pt.png)
 
 ## O que é
 

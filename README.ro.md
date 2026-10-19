@@ -10,7 +10,7 @@ Ghid offline, într-un singur fișier HTML, pentru o drumeție circulară care p
 
 **Live:** https://chiuta.github.io/URME/
 
-![Captura de ecran](screenshot.png)
+![Captura de ecran](screenshot.ro.png)
 
 ## Ce este
 

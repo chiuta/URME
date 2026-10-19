@@ -10,7 +10,7 @@ Ein Offline-Führer in einer einzigen HTML-Datei für eine Rundwanderung ab Alun
 
 **Online-App:** https://chiuta.github.io/URME/
 
-![Screenshot](screenshot.png)
+![Screenshot](screenshot.de.png)
 
 ## Was es ist
 
