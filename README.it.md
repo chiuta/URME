@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · **Italiano** · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versione:** 1.2.3 · **Ultimo aggiornamento:** 2026-10-22
+**Versione:** 1.2.4 · **Ultimo aggiornamento:** 2026-10-22
 
 Lingue dell'interfaccia: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -29,6 +29,7 @@ Verificate nel codice:
 
 ## Novità (1.1.0)
 
+- 1.2.4 — 2026-10-22: fff-kit 1.1.4: bersagli touch e testo minimo; bersagli touch/testo corretti
 - **Mappa del cielo** (sezione «Noaptea» (La notte)): scegli la data e l'ora (ora della Romania, con il passaggio all'ora legale/solare) e l'app disegna il cielo sopra la zona Colți–Aluniș (circa 45,38° N, 26,40° E): stelle fino alla magnitudine 5 (1627 dal catalogo Hipparcos), le figure e i nomi rumeni delle costellazioni, il Sole, la Luna (con la fase disegnata) e i pianeti da Mercurio a Saturno. Sotto la mappa compare una tabella con altezza e azimut dei corpi, la fase della Luna, il suo sorgere e tramontare e un'indicazione «cielo buio» (Sole sotto −18° e Luna sotto l'orizzonte). Il calcolo avviene in locale, con le effemeridi di `fff-kit` (errori misurati: meno di 3″ per Sole, Luna e pianeti rispetto a JPL DE421/423; vedi `fff-kit/docs/ephem.md`).
   - **Limiti:** non disegna la Via Lattea, le nuvole, l'inquinamento luminoso né il rilievo (la montagna alza l'orizzonte reale); mancano le stelle più deboli della magnitudine 5 e i pianeti Urano e Nettuno (non visibili a occhio nudo). La mappa serve per la pianificazione, non per la sicurezza.
 - **L'elenco dell'attrezzatura viene conservato** tra una visita e l'altra (`localStorage`, chiave `urme.gear`), così come le spunte «Figuri» (Figure) e «Nume» (Nomi) della mappa del cielo (`urme.sky`). Puoi fare una copia di riserva `.fff.json` dalla finestra «Transparență» (Trasparenza) (premi la versione nel piè di pagina).
