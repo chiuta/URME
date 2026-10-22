@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · **Français** · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version :** 1.2.1 · **Dernière mise à jour :** 2026-10-19
+**Version :** 1.2.2 · **Dernière mise à jour :** 2026-10-22
 
 Langues de l'interface : **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -76,6 +76,9 @@ Modules intégrés dans `index.html` : `core`, `label`, `bundle`, `qr`, `ephem`,
 Téléchargez `index.html` et ouvrez-le dans un navigateur ; il fonctionne sans internet.
 
 ## Historique / Changelog
+
+### 1.2.2 — 2026-10-22
+- Mobile : le texte fait au moins 12 px et les boutons et champs ont des cibles tactiles plus grandes sur les écrans étroits.
 
 ### 14 octobre 2026 (v1.1.0)
 - Nouveau : carte du ciel avec éphémérides locales, liste d'équipement enregistrée, fiche de terrain imprimée avec QR, fenêtre « Transparență » (fff-kit : core, label, bundle, qr, ephem, ephem-stars) ; `tests/fff-r8.test.mjs`. CSP : hachage du script recalculé, sans autre changement.

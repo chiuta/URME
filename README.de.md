@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 1.2.1 · **Zuletzt aktualisiert:** 2026-10-19
+**Version:** 1.2.2 · **Zuletzt aktualisiert:** 2026-10-22
 
 Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -76,6 +76,9 @@ In `index.html` eingefügte Module: `core`, `label`, `bundle`, `qr`, `ephem`, `e
 Lade `index.html` herunter und öffne sie in einem Browser; sie funktioniert ohne Internet.
 
 ## Verlauf / Changelog
+
+### 1.2.2 — 2026-10-22
+- Mobil: Der Text ist mindestens 12 px groß, und Schaltflächen und Felder haben auf schmalen Bildschirmen größere Touch-Flächen.
 
 ### 14. Oktober 2026 (v1.1.0)
 - Neu: Himmelskarte mit lokalen Ephemeriden, gespeicherte Ausrüstungsliste, gedrucktes Feldblatt mit QR, Fenster „Transparență“ (fff-kit: core, label, bundle, qr, ephem, ephem-stars); `tests/fff-r8.test.mjs`. CSP: Skript-Hash neu berechnet, keine weiteren Änderungen.
