@@ -2,7 +2,7 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 1.2.5 · **Last updated:** 2026-10-23
+**Version:** 1.2.6 · **Last updated:** 2026-10-23
 
 Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -76,6 +76,10 @@ Modules pasted into `index.html`: `core`, `label`, `bundle`, `qr`, `ephem`, `eph
 Download `index.html` and open it in a browser; it works without internet.
 
 ## History / Changelog
+
+### 1.2.6 — 2026-10-23
+- Day planner: a return time past midnight is now shown as a valid clock time (e.g. 01:00) instead of 25:00–26:00 or 28:30; the “after sunset” warning is unchanged.
+- On touch screens (`pointer: coarse`) the small buttons and the date/time fields have a 44 px touch target.
 
 ### 1.2.4 — 2026-10-22
 - fff-kit 1.1.4: touch targets and minimum text size; touch targets/text fixed

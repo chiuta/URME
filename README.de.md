@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 1.2.5 · **Zuletzt aktualisiert:** 2026-10-23
+**Version:** 1.2.6 · **Zuletzt aktualisiert:** 2026-10-23
 
 Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -76,6 +76,10 @@ In `index.html` eingefügte Module: `core`, `label`, `bundle`, `qr`, `ephem`, `e
 Lade `index.html` herunter und öffne sie in einem Browser; sie funktioniert ohne Internet.
 
 ## Verlauf / Changelog
+
+### 1.2.6 — 2026-10-23
+- Tagesplaner: Eine Rückkehrzeit nach Mitternacht wird jetzt als gültige Uhrzeit angezeigt (z. B. 01:00) statt 25:00–26:00 oder 28:30; die Warnung „nach Sonnenuntergang“ bleibt unverändert.
+- Auf Touchscreens (`pointer: coarse`) haben die kleinen Schaltflächen und die Datums-/Zeitfelder ein Touch-Ziel von 44 px.
 
 ### 1.2.4 — 2026-10-22
 - fff-kit 1.1.4: Touch-Ziele und Mindestschriftgröße; Touch-Ziele/Text korrigiert

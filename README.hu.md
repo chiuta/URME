@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 1.2.5 · **Utolsó frissítés:** 2026-10-23
+**Verzió:** 1.2.6 · **Utolsó frissítés:** 2026-10-23
 
 A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -76,6 +76,10 @@ Az `index.html`-be illesztett modulok: `core`, `label`, `bundle`, `qr`, `ephem`,
 Töltsd le az `index.html` fájlt, és nyisd meg egy böngészőben; internet nélkül is működik.
 
 ## Előzmények / Changelog
+
+### 1.2.6 — 2026-10-23
+- Napi tervező: az éjfél utáni visszaérkezési idő most érvényes időként jelenik meg (pl. 01:00) a 25:00–26:00 vagy 28:30 helyett; a „napnyugta után” figyelmeztetés változatlan.
+- Érintőképernyőn (`pointer: coarse`) a kis gombok és a dátum-/időmezők 44 px-es érintési célpontot kapnak.
 
 ### 1.2.4 — 2026-10-22
 - fff-kit 1.1.4: érintési célpontok és minimális szövegméret; érintési célpontok/szöveg javítva
