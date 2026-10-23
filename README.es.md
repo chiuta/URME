@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · **Español** · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versión:** 1.2.5 · **Última actualización:** 2026-10-23
+**Versión:** 1.2.6 · **Última actualización:** 2026-10-23
 
 Idiomas de la interfaz: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -76,6 +76,10 @@ Módulos integrados en `index.html`: `core`, `label`, `bundle`, `qr`, `ephem`, `
 Descarga `index.html` y ábrelo en un navegador; funciona sin internet.
 
 ## Historial / Changelog
+
+### 1.2.6 — 2026-10-23
+- Planificador del día: una hora de regreso pasada la medianoche se muestra ahora como hora válida (p. ej. 01:00) en lugar de 25:00–26:00 o 28:30; el aviso «después del ocaso» no cambia.
+- En pantallas táctiles (`pointer: coarse`) los botones pequeños y los campos de fecha/hora tienen un área táctil de 44 px.
 
 ### 1.2.4 — 2026-10-22
 - fff-kit 1.1.4: objetivos táctiles y texto mínimo; objetivos táctiles/texto corregidos

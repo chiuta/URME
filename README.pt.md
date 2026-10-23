@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · **Português** · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versão:** 1.2.5 · **Última atualização:** 2026-10-23
+**Versão:** 1.2.6 · **Última atualização:** 2026-10-23
 
 Idiomas da interface: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -76,6 +76,10 @@ Módulos integrados no `index.html`: `core`, `label`, `bundle`, `qr`, `ephem`, `
 Descarregue `index.html` e abra-o num navegador; funciona sem internet.
 
 ## Histórico / Changelog
+
+### 1.2.6 — 2026-10-23
+- Planeador do dia: uma hora de regresso depois da meia-noite aparece agora como hora válida (p. ex. 01:00) em vez de 25:00–26:00 ou 28:30; o aviso «depois do pôr do sol» não muda.
+- Em ecrãs táteis (`pointer: coarse`) os botões pequenos e os campos de data/hora têm uma área tátil de 44 px.
 
 ### 1.2.4 — 2026-10-22
 - fff-kit 1.1.4: alvos táteis e texto mínimo; alvos táteis/texto corrigidos

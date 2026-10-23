@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · **Italiano** · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versione:** 1.2.5 · **Ultimo aggiornamento:** 2026-10-23
+**Versione:** 1.2.6 · **Ultimo aggiornamento:** 2026-10-23
 
 Lingue dell'interfaccia: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -77,6 +77,10 @@ Moduli incorporati in `index.html`: `core`, `label`, `bundle`, `qr`, `ephem`, `e
 Scarica `index.html` e aprilo in un browser; funziona senza internet.
 
 ## Cronologia / Changelog
+
+### 1.2.6 — 2026-10-23
+- Pianificatore del giorno: un orario di rientro dopo la mezzanotte è ora mostrato come orario valido (es. 01:00) invece di 25:00–26:00 o 28:30; l'avviso «dopo il tramonto» resta invariato.
+- Sugli schermi tattili (`pointer: coarse`) i piccoli pulsanti e i campi data/ora hanno un'area tattile di 44 px.
 
 ### 1.2.3 — 2026-10-22
 - fff-kit 1.1.2: PBKDF2 a 600.000 iterazioni, protezione anti-clickjacking.
