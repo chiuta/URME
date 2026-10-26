@@ -1,11 +1,14 @@
 // Teste pentru funcțiile din v1.1.0: harta cerului (efemeride locale), lista de echipament salvată, fișa de teren tipărită, kit.
 // Rulare: node tests/fff-r8.test.mjs   (Playwright din /opt/node-tools, Chromium din /opt/pw-browsers; rețea blocată)
+// [fff-portable] axe-core: FFF_AXE / AXE_PATH, apoi pachetul `axe-core` (npm i -D axe-core). Dacă lipsește: undefined (testele cu axe pică cu mesaj clar).
+import {createRequire as __fffCR} from 'node:module';
+const __fffAxe = () => { try { return __fffCR(import.meta.url).resolve('axe-core/axe.min.js'); } catch { return undefined; } };
 import {createRequire} from 'module'; import fs from 'node:fs'; import path from 'node:path'; import {fileURLToPath} from 'node:url';
-const require = createRequire('/opt/node-tools/package.json'); const {chromium} = require('playwright');
+const require = createRequire(process.env.PW_ROOT || import.meta.url); const {chromium} = require('playwright');
 const HERE = path.dirname(fileURLToPath(import.meta.url)); const FILE = 'file://' + path.join(HERE, '..', 'index.html');
-const AXE = process.env.FFF_AXE || '/tmp/claude-0/-home-claude/78529928-3825-51c3-b9bd-0e81655ab6bc/scratchpad/sweep/node_modules/axe-core/axe.min.js';
+const AXE = process.env.FFF_AXE || __fffAxe();
 let ok = 0, bad = 0; const t = (n, c, x) => { if (c) { ok++; console.log('  ok  ', n); } else { bad++; console.log('  FAIL', n, x ?? ''); } };
-const b = await chromium.launch({executablePath: '/opt/pw-browsers/chromium', args: ['--no-sandbox']});
+const b = await chromium.launch({executablePath: process.env.CHROMIUM_PATH || undefined, args: ['--no-sandbox']});
 async function mk(w = 1280, h = 800, scheme = 'light') {
   const ctx = await b.newContext({viewport: {width: w, height: h}, colorScheme: scheme, acceptDownloads: true, locale: 'ro-RO'});
   const net = []; await ctx.route(/^https?:/, r => { net.push(r.request().url()); r.abort(); });

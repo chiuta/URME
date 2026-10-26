@@ -1,10 +1,10 @@
 // URME — regresii din auditul adversarial (octombrie 2026): ore după miezul nopții în planificator, ținte tactile.
 // Rulare: node tests/audit-2026-10.test.mjs   (Playwright din /opt/node-tools, Chromium din /opt/pw-browsers; rețea blocată)
 import {createRequire} from 'module'; import path from 'node:path'; import {fileURLToPath} from 'node:url';
-const require = createRequire('/opt/node-tools/package.json'); const {chromium} = require('playwright');
+const require = createRequire(process.env.PW_ROOT || import.meta.url); const {chromium} = require('playwright');
 const FILE = 'file://' + path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'index.html');
 let ok = 0, bad = 0; const t = (n, c, x) => { if (c) { ok++; console.log('  ok  ', n); } else { bad++; console.log('  FAIL', n, x ?? ''); } };
-const b = await chromium.launch({executablePath: '/opt/pw-browsers/chromium', args: ['--no-sandbox']});
+const b = await chromium.launch({executablePath: process.env.CHROMIUM_PATH || undefined, args: ['--no-sandbox']});
 async function open(opts = {}) {
   const ctx = await b.newContext({viewport: {width: 390, height: 800}, locale: 'ro-RO', ...opts});
   await ctx.route(/^https?:/, r => r.abort());
