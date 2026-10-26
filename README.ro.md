@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 1.2.7 · **Ultima actualizare:** 2026-10-26
+**Versiune:** 2.0.0 · **Ultima actualizare:** 2026-10-26
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -24,6 +24,7 @@ Verificate în cod:
 - Secțiune pliabilă „In English — safety and essentials for visitors” (sub chenarul de siguranță, `lang="en"`): traducerea fidelă a chenarului „Siguranță în munte”, a datelor de bază (distanță, durată, dificultate, sezon) și a listei „Ce iei cu tine”, fără informații noi; restul paginii rămâne în română.
 - Listă de echipament cu bife și contor („X din 9 pregătite"); bifele se păstrează acum în browser (vezi „Funcții noi”). Butonul „Copiază ce îmi mai trebuie" copiază în clipboard doar elementele nebifate.
 - Planificator de zi (secțiunea „Pornire"): pentru o dată și o oră de plecare calculează local răsăritul, apusul și amurgul civil (zona Colți, aprox. 45,38° N, 26,40° E, după Wikipedia, consultat la 11 octombrie 2026), în ora României (cu trecerea la ora de vară/iarnă), cea mai târzie plecare recomandată (6 h de traseu + 1 h rezervă) și marja față de apus pentru estimarea de 5–6 h din ghid; avertizează dacă revenirea ar fi după apus. Algoritm astronomic simplificat, verificat la 11 octombrie 2026 față de un calculator public pentru Buzău (diferențe de câteva minute, explicabile prin locație); nu ține cont de relief.
+- **Ghid pe teren (2.0)** (secțiunea „Pornire”): îți marchezi tu, la fața locului, punctele traseului (poziția se citește doar când apeși „Marchează poziția mea”) și le legi de o fișă (pădure, plante, chihlimbar, fosile, Aluniș). Cu „Pornește ghidul GPS”, aplicația te anunță când ești la o rază aleasă (25/50/100 m) de un punct și îți deschide fișa; „Următoarea oprire” merge și fără GPS. Nu există coordonate predefinite; punctele rămân doar în telefon (`urme.guide`), fără urmărire. Poziția telefonului poate fi imprecisă sub pădure; ghidul rămâne informativ și neoficial.
 - Navigare pe secțiuni cu evidențierea secțiunii curente; comutator zi/noapte (urmărește setarea sistemului la deschidere); stil de tipărire.
 - Secțiuni pliabile (istoria minei, „Alte urme din jur", „De ce se numește URME").
 

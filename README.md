@@ -2,7 +2,7 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 1.2.7 · **Last updated:** 2026-10-26
+**Version:** 2.0.0 · **Last updated:** 2026-10-26
 
 Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -20,6 +20,7 @@ URME ("A day in the layers of the mountain") is a guide to read, not a navigatio
 
 Checked in the code:
 - Visible "Siguranță în munte" (Mountain safety) box: weather, equipment, 112, no guarantees about trail marking/condition, the limits of the map and of GPS.
+- **Field guide (2.0)**: mark your own route points on site (position is read only when you press the button), link each to a card, and the optional GPS guide announces and opens the card when you are within 25/50/100 m; a manual "Next stop" mode works without GPS. No predefined coordinates, nothing leaves the phone.
 - Own schematic SVG map of the loop (no external map tiles), with a legend; on a narrow screen it scrolls sideways.
 - Collapsible section "In English — safety and essentials for visitors" (below the safety box, `lang="en"`): a faithful translation of the "Siguranță în munte" box, of the basic data (distance, duration, difficulty, season) and of the "Ce iei cu tine" (What to bring) list, without new information; the rest of the page stays in Romanian.
 - Equipment list with check marks and a counter ("X of 9 ready"); the check marks are now kept in the browser (see "New features"). The "Copiază ce îmi mai trebuie" (Copy what I still need) button copies only the unchecked items to the clipboard.
