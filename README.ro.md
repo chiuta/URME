@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 2.1.0 · **Ultima actualizare:** 2026-10-27
+**Versiune:** 2.2.0 · **Ultima actualizare:** 2026-10-27
 
 **Stare:** stabil · **Offline:** complet
 
@@ -80,7 +80,7 @@ Descarcă `index.html` și deschide-l în browser; funcționează fără interne
 
 ## Export GPX din punctele tale
 
-În „Ghid pe teren”, butonul **Exportă GPX** descarcă un fișier GPX 1.1 construit **numai din datele aplicației: punctele pe care le-ai marcat tu** (poziție GPS citită la cerere). Fiecare punct cu poziție devine un `<wpt>` (nume = eticheta ta sau titlul fișei; descriere = fișa legată, raza de apropiere, precizia GPS, „vizitat”), iar punctele, în ordinea marcării, formează și o rută `<rte>`. Punctele fără poziție nu se exportă; nu există coordonate predefinite și niciun traseu „oficial”. Fișierul nu este o urmă (`<trk>`) înregistrată pe teren și **nu garantează** un traseu sigur sau marcat. Se generează local; nu se trimite nimic.
+În „Ghid pe teren”, butonul **Exportă GPX** descarcă un fișier GPX 1.1 construit **numai din datele aplicației: punctele pe care le-ai marcat tu** (din 2.2.0, opțional și traseul înregistrat de tine; vezi mai jos) (poziție GPS citită la cerere). Fiecare punct cu poziție devine un `<wpt>` (nume = eticheta ta sau titlul fișei; descriere = fișa legată, raza de apropiere, precizia GPS, „vizitat”), iar punctele, în ordinea marcării, formează și o rută `<rte>`. Punctele fără poziție nu se exportă; nu există coordonate predefinite și niciun traseu „oficial”. Fișierul nu este o urmă (`<trk>`) înregistrată pe teren și **nu garantează** un traseu sigur sau marcat. Se generează local; nu se trimite nimic.
 
 ## Hărți și surse oficiale (linkuri verificate)
 
@@ -92,7 +92,17 @@ Descarcă `index.html` și deschide-l în browser; funcționează fără interne
 
 **Notă de siguranță:** la consultarea din 27 oct. 2026, lista pe județe din „Repartiție teritorială” nu includea un serviciu Salvamont pentru județul Buzău, iar presa locală ([Puterea.ro, 13 ian. 2024](https://www.puterea.ro/?p=306423)) relata că el nu fusese înființat. Nu presupune că există o echipă locală în apropiere; în caz de urgență sună **112**. **Nu am găsit o hartă oficială de trasee marcate** pentru zona Colți–Aluniș care să poată fi legată; ghidul rămâne neoficial, iar harta lui, schematică.
 
+## Traseu parcurs în GPX (opțional, 2.2.0)
+
+În „Ghid pe teren": caseta **„Înregistrează și traseul parcurs (doar în memorie)"**, oprită implicit. Cât ghidul GPS e pornit, pozițiile se țin doar în pagină (nu în localStorage; se pierd la închidere sau la „Șterge toate punctele"), cu cel mult 3000 de puncte, fără fixuri cu precizie > 100 m și fără puncte la mai puțin de 8 m unul de altul. „Exportă GPX" adaugă atunci `<trk>` (cu timp UTC pentru fiecare punct) după `<rte>`; fără înregistrare, GPX-ul rămâne cel din 2.1. Testat cu poziții GPS **simulate** (`tests/track-v22.test.mjs`), nu pe teren. Etichetele noi în fr/it/es/pt/de/hu sunt traduceri automate.
+
+**Neschimbat:** nu există hartă oficială de trasee marcate Colți–Aluniș de legat. O căutare la 27.10.2026 a găsit doar fișa „Aluniș – Poiana Cozanei" (muntii-nostri.ro, bandă roșie, 2,5 km), alt traseu și cu statut de publicare neconfirmat, deci nu a fost adăugată.
+
 ## Istoric / Changelog
+
+### 2.2.0 — 2026-10-27
+- Traseu parcurs opțional (doar în memorie) exportat ca `<trk>` în GPX.
+
 - **2.1.0 — 2026-10-27:** export **GPX** din punctele marcate de utilizator (Ghid pe teren); secțiune „Hărți și surse oficiale” cu 5 linkuri verificate pe web (Geoparcul Ținutul Buzăului, Consiliul Județean Buzău, Salvamont România) și notă de siguranță 112; linii Stare/Offline; CHANGELOG.md (anterior: v2.0.0).
 
 ### 1.2.6 — 2026-10-23

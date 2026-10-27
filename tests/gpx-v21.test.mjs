@@ -34,7 +34,7 @@ console.log('--- export GPX');
       wpt: q('wpt').map(w => ({lat: w.getAttribute('lat'), lon: w.getAttribute('lon'), name: w.getElementsByTagName('name')[0].textContent, desc: w.getElementsByTagName('desc')[0].textContent, order: Array.from(w.children).map(c => c.nodeName)})),
       rtept: q('rtept').map(w => w.getAttribute('lat') + ',' + w.getAttribute('lon')), top: Array.from(doc.documentElement.children).map(c => c.nodeName), time: doc.getElementsByTagName('time')[0].textContent}; }, txt);
   t('XML bine format (parser XML al browserului)', !r.err, r.err);
-  t('GPX 1.1, rădăcină gpx, creator cu versiunea', r.root === 'gpx' && r.ver === '1.1' && /^URME 2\.1\.0$/.test(r.creator), [r.root, r.ver, r.creator]);
+  t('GPX 1.1, rădăcină gpx, creator cu versiunea', r.root === 'gpx' && r.ver === '1.1' && /^URME 2\.\d+\.\d+$/.test(r.creator), [r.root, r.ver, r.creator]);
   t('ordinea elementelor de nivel superior: metadata, wpt…, rte', r.top.join() === 'metadata,wpt,wpt,wpt,rte', r.top);
   t('doar punctele cu poziție (3 din 4), fără coordonate predefinite', r.wpt.length === 3 && r.rtept.length === 3, r.wpt.length);
   t('coordonate cu 6 zecimale, negative păstrate', r.wpt[0].lat === '45.380123' && r.wpt[0].lon === '26.400988' && r.wpt[2].lat === '-12.500000' && r.wpt[2].lon === '-70.250000', r.wpt.map(w => w.lat + ',' + w.lon));

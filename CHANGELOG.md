@@ -2,6 +2,15 @@
 
 Format: [SemVer](https://semver.org/lang/ro/) MAJOR.MINOR.PATCH.
 
+## 2.2.0 — 2026-10-27 (anterior: 2.1.0)
+
+Traseu parcurs în GPX (opțional):
+- Casetă „Înregistrează și traseul parcurs (doar în memorie)", oprită implicit; punctele (max. 3000, precizie ≤ 100 m, ≥ 8 m între ele) nu se salvează în localStorage; „Exportă GPX" adaugă `<trk>` cu timp UTC. Fără înregistrare, GPX-ul e neschimbat.
+- Testat cu poziții GPS simulate (`tests/track-v22.test.mjs`, 19 verificări), nu pe teren. Texte noi în 8 limbi (fr/it/es/pt/de/hu: traducere automată).
+- Hartă oficială Colți–Aluniș: tot nelegată; singura fișă găsită (muntii-nostri.ro) e alt traseu și cu statut neconfirmat.
+
+---
+
 ## 2.1.0 — 2026-10-27 (anterior: v2.0.0)
 
 Stare: stabil · Offline: complet
