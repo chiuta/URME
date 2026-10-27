@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · **Português** · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versão:** 2.1.0 · **Última atualização:** 2026-10-27
+**Versão:** 2.2.0 · **Última atualização:** 2026-10-27
 
 **Estado:** estável · **Offline:** completo
 
@@ -91,7 +91,19 @@ A secção «Practic» tem ligações para fontes oficiais, **verificadas na web
 
 **Nota de segurança:** na consulta de 27 out. 2026, a lista por distritos de «Repartiție teritorială» não incluía um serviço Salvamont para o distrito de Buzău, e a imprensa local ([Puterea.ro, 13 jan. 2024](https://www.puterea.ro/?p=306423)) noticiava que não tinha sido criado. Não presuma que há uma equipa local por perto; em emergência ligue **112**. **Não encontrámos um mapa oficial de trilhos sinalizados** para a zona Colți–Aluniș que se possa ligar; o guia continua não oficial e o seu mapa esquemático.
 
+## Walked route in GPX (optional, 2.2.0)
+
+_(English only; not yet translated into this language. Machine translation intentionally not added to avoid errors in technical statements.)_
+
+In the field guide: the checkbox **"Also record the route walked (memory only)"**, off by default. While the GPS guide is on, positions are held only in the page (not in localStorage; lost on close or on "Delete all points"), up to 3000 points, ignoring fixes less accurate than 100 m and points closer than 8 m to each other. "Export GPX" then adds a `<trk>` (with a UTC time per point) after the `<rte>`; without recording, the GPX is the 2.1 one. Tested with **simulated** GPS positions (`tests/track-v22.test.mjs`), not in the field. New fr/it/es/pt/de/hu labels are machine translations.
+
+**Unchanged:** there is no official map of the marked Colți–Aluniș trails to link. A search on 27 Oct 2026 found only the "Aluniș – Poiana Cozanei" sheet (muntii-nostri.ro, red band, 2.5 km), a different route with an unconfirmed publisher status, so it was not added.
+
 ## Histórico / Changelog
+
+### 2.2.0 — 2026-10-27
+- Optional walked route (memory only) exported as `<trk>` in GPX.
+
 - **2.1.0 — 2026-10-27:** exportação **GPX** dos pontos marcados pelo utilizador (Guia de campo); secção «Mapas e fontes oficiais» com 5 ligações verificadas na web (Geoparque Ținutul Buzăului, Conselho Distrital de Buzău, Salvamont România) e nota de segurança 112; linhas Estado/Offline; CHANGELOG.md (anterior: v2.0.0).
 
 ### 1.2.6 — 2026-10-23

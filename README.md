@@ -2,7 +2,7 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 2.1.0 · **Last updated:** 2026-10-27
+**Version:** 2.2.0 · **Last updated:** 2026-10-27
 
 **Status:** stable · **Offline:** complete
 
@@ -80,7 +80,7 @@ Download `index.html` and open it in a browser; it works without internet.
 
 ## GPX export of your own points
 
-In “Field guide”, the **Export GPX** button downloads a GPX 1.1 file built **only from the app's own data: the points you marked yourself** (GPS position read on request). Each point with a position becomes a `<wpt>` (name = your label or the card title; description = linked card, approach radius, GPS accuracy, “visited”), and the points, in marking order, also form a `<rte>` route. Points without a position are not exported; there are no predefined coordinates and no “official” trail. The file is not a recorded track (`<trk>`) and **does not guarantee** a safe or marked route. It is generated locally; nothing is sent.
+In “Field guide”, the **Export GPX** button downloads a GPX 1.1 file built **only from the app's own data: the points you marked yourself** (since 2.2.0, optionally also the route you recorded; see below) (GPS position read on request). Each point with a position becomes a `<wpt>` (name = your label or the card title; description = linked card, approach radius, GPS accuracy, “visited”), and the points, in marking order, also form a `<rte>` route. Points without a position are not exported; there are no predefined coordinates and no “official” trail. The file is not a recorded track (`<trk>`) and **does not guarantee** a safe or marked route. It is generated locally; nothing is sent.
 
 ## Official maps and sources (verified links)
 
@@ -92,7 +92,17 @@ The “Practic” section has links to official sources, **checked on the web on
 
 **Safety note:** when checked on 27 Oct 2026, the county list in “Repartiție teritorială” did not include a Salvamont service for Buzău County, and local press ([Puterea.ro, 13 Jan 2024](https://www.puterea.ro/?p=306423)) reported that it had not been set up. Do not assume a local team is nearby; in an emergency call **112**. **We did not find an official map of marked trails** for the Colți–Aluniș area that could be linked; the guide stays unofficial and its map schematic.
 
+## Walked route in GPX (optional, 2.2.0)
+
+In the field guide: the checkbox **"Also record the route walked (memory only)"**, off by default. While the GPS guide is on, positions are held only in the page (not in localStorage; lost on close or on "Delete all points"), up to 3000 points, ignoring fixes less accurate than 100 m and points closer than 8 m to each other. "Export GPX" then adds a `<trk>` (with a UTC time per point) after the `<rte>`; without recording, the GPX is the 2.1 one. Tested with **simulated** GPS positions (`tests/track-v22.test.mjs`), not in the field. New fr/it/es/pt/de/hu labels are machine translations.
+
+**Unchanged:** there is no official map of the marked Colți–Aluniș trails to link. A search on 27 Oct 2026 found only the "Aluniș – Poiana Cozanei" sheet (muntii-nostri.ro, red band, 2.5 km), a different route with an unconfirmed publisher status, so it was not added.
+
 ## History / Changelog
+
+### 2.2.0 — 2026-10-27
+- Optional walked route (memory only) exported as `<trk>` in GPX.
+
 - **2.1.0 — 2026-10-27:** **GPX** export of the user-marked points (Field guide); “Official maps and sources” section with 5 web-verified links (Buzău Land Geopark, Buzău County Council, Salvamont România) and a 112 safety note; Status/Offline lines; CHANGELOG.md (previous: v2.0.0).
 
 ### 1.2.6 — 2026-10-23
