@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · **Italiano** · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versione:** 2.0.0 · **Ultimo aggiornamento:** 2026-10-26
+**Versione:** 2.1.0 · **Ultimo aggiornamento:** 2026-10-27
+
+**Stato:** stabile · **Offline:** completo
 
 Lingue dell'interfaccia: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -58,7 +60,7 @@ Moduli incorporati in `index.html`: `core`, `label`, `bundle`, `qr`, `ephem`, `e
 ## Privacy e rete
 
 - **Archiviazione:** solo `localStorage`, in locale nel browser: `urme.gear` (le spunte dell'elenco dell'attrezzatura) e `urme.sky` (due preferenze della mappa del cielo). Non usa `sessionStorage`, IndexedDB né cookie; puoi cancellare i dati da «Transparență».
-- **Rete:** non effettua alcuna richiesta di rete (niente `fetch`, script, font, immagini o mappe esterne). La CSP nella pagina blocca le connessioni esterne. L'unico link esterno è `tabara.asfan.online`, che si apre solo se ci clicchi.
+- **Rete:** non effettua alcuna richiesta di rete (niente `fetch`, script, font, immagini o mappe esterne). La CSP nella pagina blocca le connessioni esterne. I link esterni (`tabara.asfan.online` e le fonti ufficiali qui sotto) si aprono solo se ci clicchi; l'app stessa non invia loro alcuna richiesta.
 - **Permessi:** non richiede alcun permesso (non usa geolocalizzazione, fotocamera o microfono). L'app non traccia la tua posizione.
 - Non ci sono account, telemetria o analisi del traffico.
 
@@ -76,7 +78,22 @@ Moduli incorporati in `index.html`: `core`, `label`, `bundle`, `qr`, `ephem`, `e
 
 Scarica `index.html` e aprilo in un browser; funziona senza internet.
 
+## Esportazione GPX dei tuoi punti
+
+In «Guida sul campo», il pulsante **Esporta GPX** scarica un file GPX 1.1 costruito **solo con i dati dell'app: i punti che hai segnato tu** (posizione GPS letta su richiesta). Ogni punto con posizione diventa un `<wpt>` (nome = la tua etichetta o il titolo della scheda; descrizione = scheda collegata, raggio di avvicinamento, precisione GPS, «visitato»), e i punti, nell'ordine di marcatura, formano anche una rotta `<rte>`. I punti senza posizione non vengono esportati; non ci sono coordinate predefinite né un percorso «ufficiale». Il file non è una traccia registrata (`<trk>`) e **non garantisce** un percorso sicuro o segnalato. Viene generato in locale; non si invia nulla.
+
+## Mappe e fonti ufficiali (link verificati)
+
+La sezione «Practic» contiene link a fonti ufficiali, **verificati sul web il 27 ottobre 2026** (le pagine si sono aperte e contengono quanto descritto; non garantiamo che restino uguali):
+
+- [Geoparco UNESCO Ținutul Buzăului — Mappe e libri](https://tinutulbuzaului.org/harti-si-carti/): mappe e guide PDF gratuite, tra cui una guida agli insediamenti rupestri;
+- [Consiglio provinciale di Buzău — Vestigia rupestri](https://cjbuzau.ro/vestigiile-rupestre/): presentazione ufficiale dei vestigi rupestri, compreso Aluniș;
+- Salvamont România (A.N.S.M.R.): [mappa dei servizi](https://www.salvamontromania.ro/harta-salvamont.php), [ripartizione territoriale](https://www.salvamontromania.ro/module.php?node=repartitie_teritoriala) e [l'app Salvamont](https://www.salvamontromania.ro/aplicatia-salvamont.php) (allarme SOS con la tua posizione, solo per numeri registrati in Romania).
+
+**Nota di sicurezza:** alla consultazione del 27 ott. 2026, l'elenco per provincia di «Repartiție teritorială» non includeva un servizio Salvamont per la provincia di Buzău, e la stampa locale ([Puterea.ro, 13 gen. 2024](https://www.puterea.ro/?p=306423)) riferiva che non era stato istituito. Non dare per scontata una squadra locale nei dintorni; in caso di emergenza chiama il **112**. **Non abbiamo trovato una mappa ufficiale dei sentieri segnalati** per la zona Colți–Aluniș da collegare; la guida resta non ufficiale e la sua mappa schematica.
+
 ## Cronologia / Changelog
+- **2.1.0 — 2026-10-27:** esportazione **GPX** dei punti segnati dall'utente (Guida sul campo); sezione «Mappe e fonti ufficiali» con 5 link verificati sul web (Geoparco Ținutul Buzăului, Consiglio provinciale di Buzău, Salvamont România) e nota di sicurezza 112; righe Stato/Offline; CHANGELOG.md (precedente: v2.0.0).
 
 ### 1.2.6 — 2026-10-23
 - Pianificatore del giorno: un orario di rientro dopo la mezzanotte è ora mostrato come orario valido (es. 01:00) invece di 25:00–26:00 o 28:30; l'avviso «dopo il tramonto» resta invariato.

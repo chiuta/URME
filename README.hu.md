@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 2.0.0 · **Utolsó frissítés:** 2026-10-26
+**Verzió:** 2.1.0 · **Utolsó frissítés:** 2026-10-27
+
+**Állapot:** stabil · **Offline:** teljes
 
 A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -57,7 +59,7 @@ Az `index.html`-be illesztett modulok: `core`, `label`, `bundle`, `qr`, `ephem`,
 ## Adatvédelem és hálózat
 
 - **Tárolás:** kizárólag `localStorage`, helyben a böngészőben: `urme.gear` (a felszerelési lista jelölései) és `urme.sky` (az égboltkép két beállítása). Nem használ `sessionStorage`-ot, IndexedDB-t vagy sütiket; az adatokat az „Transparență” ablakból törölheted.
-- **Hálózat:** semmilyen hálózati kérést nem indít (nincs `fetch`, külső szkript, betűtípus, kép vagy térkép). Az oldal CSP-je blokkolja a külső kapcsolatokat. Az egyetlen külső hivatkozás a `tabara.asfan.online`, amely csak akkor nyílik meg, ha rákattintasz.
+- **Hálózat:** semmilyen hálózati kérést nem indít (nincs `fetch`, külső szkript, betűtípus, kép vagy térkép). Az oldal CSP-je blokkolja a külső kapcsolatokat. A külső hivatkozások (`tabara.asfan.online` és az alább felsorolt hivatalos források) csak akkor nyílnak meg, ha rájuk kattintasz; maga az alkalmazás nem küld nekik kérést.
 - **Engedélyek:** semmilyen engedélyt nem kér (nem használ helymeghatározást, kamerát vagy mikrofont). Az alkalmazás nem követi a helyzetedet.
 - Nincs fiók, telemetria vagy forgalomelemzés.
 
@@ -75,7 +77,22 @@ Az `index.html`-be illesztett modulok: `core`, `label`, `bundle`, `qr`, `ephem`,
 
 Töltsd le az `index.html` fájlt, és nyisd meg egy böngészőben; internet nélkül is működik.
 
+## A saját pontjaid GPX-exportja
+
+A „Terepi útmutatóban” a **GPX exportálása** gomb egy GPX 1.1 fájlt tölt le, amely **kizárólag az alkalmazás saját adataiból épül: az általad megjelölt pontokból** (kérésre leolvasott GPS-pozíció). Minden pozícióval rendelkező pont `<wpt>` lesz (név = a címkéd vagy a kártya címe; leírás = kapcsolt kártya, megközelítési sugár, GPS-pontosság, „meglátogatva”), a pontok pedig a jelölés sorrendjében `<rte>` útvonalat is alkotnak. A pozíció nélküli pontok nem exportálódnak; nincsenek előre megadott koordináták és „hivatalos” útvonal. A fájl nem rögzített nyomvonal (`<trk>`), és **nem garantál** biztonságos vagy jelzett útvonalat. Helyben készül; semmi sem kerül elküldésre.
+
+## Hivatalos térképek és források (ellenőrzött linkek)
+
+A „Practic” szakasz hivatalos forrásokra mutató linkeket tartalmaz, **2026. október 27-én a weben ellenőrizve** (az oldalak megnyíltak és a leírtakat tartalmazzák; nem garantáljuk, hogy változatlanok maradnak):
+
+- [Ținutul Buzăului UNESCO Geopark — Térképek és könyvek](https://tinutulbuzaului.org/harti-si-carti/): ingyenes PDF-térképek és útmutatók, köztük a sziklatelepülések útmutatója;
+- [Buzău megyei tanács — Sziklaemlékek](https://cjbuzau.ro/vestigiile-rupestre/): a sziklaemlékek hivatalos bemutatása, Aluniș-szal együtt;
+- Salvamont România (A.N.S.M.R.): [a szolgálatok térképe](https://www.salvamontromania.ro/harta-salvamont.php), [területi beosztás](https://www.salvamontromania.ro/module.php?node=repartitie_teritoriala) és [a Salvamont alkalmazás](https://www.salvamontromania.ro/aplicatia-salvamont.php) (SOS-riasztás a pozíciódmal, csak Romániában regisztrált telefonszámokra).
+
+**Biztonsági megjegyzés:** a 2026. okt. 27-i ellenőrzéskor a „Repartiție teritorială” megyei listája nem tartalmazott Salvamont-szolgálatot Buzău megyéhez, és a helyi sajtó ([Puterea.ro, 2024. jan. 13.](https://www.puterea.ro/?p=306423)) azt írta, hogy nem hozták létre. Ne feltételezd, hogy a közelben helyi csapat van; vészhelyzetben hívd a **112**-t. **Nem találtunk hivatalos, jelzett utakat tartalmazó térképet** a Colți–Aluniș területhez, amelyre hivatkozni lehetne; az útmutató nem hivatalos marad, térképe pedig sematikus.
+
 ## Előzmények / Changelog
+- **2.1.0 — 2026-10-27:** a felhasználó által megjelölt pontok **GPX**-exportja (Terepi útmutató); „Hivatalos térképek és források” szakasz 5 a weben ellenőrzött linkkel (Ținutul Buzăului Geopark, Buzău megyei tanács, Salvamont România) és 112-es biztonsági megjegyzés; Állapot/Offline sorok; CHANGELOG.md (előző: v2.0.0).
 
 ### 1.2.6 — 2026-10-23
 - Napi tervező: az éjfél utáni visszaérkezési idő most érvényes időként jelenik meg (pl. 01:00) a 25:00–26:00 vagy 28:30 helyett; a „napnyugta után” figyelmeztetés változatlan.
