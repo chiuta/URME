@@ -2,8 +2,8 @@
   "schema": 1,
   "slug": "urme",
   "name": "URME — Ghid de drumeție: plante, chihlimbar, fosile și Ansamblul Rupestru Aluniș",
-  "version": "2.0.0",
-  "updated": "2026-10-26",
+  "version": "2.1.0",
+  "updated": "2026-10-27",
   "description": "Ghid offline, detaliat, cu hartă, pentru o drumeție circulară pornind de la Aluniș Retreat: pădure, viețuitoare, plante de leac, chihlimbar, fosile și Ansamblul Rupestru Aluniș — Biserica din Piatră.",
   "egress": [],
   "permissions": [
@@ -18,8 +18,8 @@
     "urme.lang",
     "urme.sky"
   ],
-  "sizeBytes": 976790,
-  "sha256": "a8c7b752cd330ccdb250da7e8a5842aad19c3522746be977febf56f1a2240349",
+  "sizeBytes": 997375,
+  "sha256": "a597f44f4ee7660959d84fb04ad486d1f2415c4c60a8b036e5e9b120ab22d778",
   "csp": {
     "present": true,
     "directives": {

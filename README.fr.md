@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · **Français** · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version :** 2.0.0 · **Dernière mise à jour :** 2026-10-26
+**Version :** 2.1.0 · **Dernière mise à jour :** 2026-10-27
+
+**État:** stable · **Hors ligne:** complet
 
 Langues de l'interface : **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -57,7 +59,7 @@ Modules intégrés dans `index.html` : `core`, `label`, `bundle`, `qr`, `ephem`,
 ## Confidentialité et réseau
 
 - **Stockage :** uniquement `localStorage`, en local dans le navigateur : `urme.gear` (les cases cochées de la liste d'équipement) et `urme.sky` (deux préférences de la carte du ciel). Il n'utilise ni `sessionStorage`, ni IndexedDB, ni cookies ; vous pouvez effacer les données depuis « Transparență ».
-- **Réseau :** il n'effectue aucune requête réseau (ni `fetch`, ni scripts, polices, images ou cartes externes). La CSP de la page bloque les connexions externes. Le seul lien externe est `tabara.asfan.online`, qui ne s'ouvre que si vous cliquez dessus.
+- **Réseau :** il n'effectue aucune requête réseau (ni `fetch`, ni scripts, polices, images ou cartes externes). La CSP de la page bloque les connexions externes. Les liens externes (`tabara.asfan.online` et les sources officielles ci-dessous) ne s'ouvrent que si vous cliquez dessus ; l'application elle-même ne leur envoie aucune requête.
 - **Autorisations :** il ne demande aucune autorisation (il n'utilise ni géolocalisation, ni caméra, ni microphone). L'application ne suit pas votre position.
 - Il n'y a ni compte, ni télémétrie, ni analyse de trafic.
 
@@ -75,7 +77,22 @@ Modules intégrés dans `index.html` : `core`, `label`, `bundle`, `qr`, `ephem`,
 
 Téléchargez `index.html` et ouvrez-le dans un navigateur ; il fonctionne sans internet.
 
+## Export GPX de vos propres points
+
+Dans « Guide de terrain », le bouton **Exporter en GPX** télécharge un fichier GPX 1.1 construit **uniquement à partir des données de l'application : les points que vous avez marqués vous-même** (position GPS lue à la demande). Chaque point avec position devient un `<wpt>` (nom = votre libellé ou le titre de la fiche ; description = fiche liée, rayon d'approche, précision GPS, « visité »), et les points, dans l'ordre de marquage, forment aussi une route `<rte>`. Les points sans position ne sont pas exportés ; il n'y a ni coordonnées prédéfinies ni itinéraire « officiel ». Le fichier n'est pas une trace enregistrée (`<trk>`) et **ne garantit pas** un itinéraire sûr ou balisé. Il est généré localement ; rien n'est envoyé.
+
+## Cartes et sources officielles (liens vérifiés)
+
+La section « Practic » contient des liens vers des sources officielles, **vérifiés sur le web le 27 octobre 2026** (les pages se sont ouvertes et contiennent ce qui est décrit ; rien ne garantit qu'elles restent identiques) :
+
+- [Géoparc UNESCO Ținutul Buzăului — Cartes et livres](https://tinutulbuzaului.org/harti-si-carti/) : cartes et guides PDF gratuits, dont un guide des habitats rupestres ;
+- [Conseil départemental de Buzău — Vestiges rupestres](https://cjbuzau.ro/vestigiile-rupestre/) : présentation officielle des vestiges rupestres, dont Aluniș ;
+- Salvamont România (A.N.S.M.R.) : [carte des services](https://www.salvamontromania.ro/harta-salvamont.php), [répartition territoriale](https://www.salvamontromania.ro/module.php?node=repartitie_teritoriala) et [l'application Salvamont](https://www.salvamontromania.ro/aplicatia-salvamont.php) (alerte SOS avec votre position, uniquement pour les numéros enregistrés en Roumanie).
+
+**Note de sécurité :** à la consultation du 27 oct. 2026, la liste par département de « Repartiție teritorială » n'incluait pas de service Salvamont pour le département de Buzău, et la presse locale ([Puterea.ro, 13 janv. 2024](https://www.puterea.ro/?p=306423)) rapportait qu'il n'avait pas été créé. Ne supposez pas qu'une équipe locale soit proche ; en cas d'urgence, appelez le **112**. **Nous n'avons pas trouvé de carte officielle de sentiers balisés** pour la zone Colți–Aluniș qui puisse être liée ; le guide reste non officiel et sa carte schématique.
+
 ## Historique / Changelog
+- **2.1.0 — 2026-10-27 :** export **GPX** des points marqués par l'utilisateur (Guide de terrain) ; section « Cartes et sources officielles » avec 5 liens vérifiés sur le web (Géoparc Ținutul Buzăului, Conseil départemental de Buzău, Salvamont România) et note de sécurité 112 ; lignes État/Hors ligne ; CHANGELOG.md (précédente : v2.0.0).
 
 ### 1.2.6 — 2026-10-23
 - Planificateur de journée : une heure de retour après minuit s'affiche désormais comme une heure valide (p. ex. 01:00) et non 25:00–26:00 ou 28:30 ; l'avertissement « après le coucher du soleil » est inchangé.

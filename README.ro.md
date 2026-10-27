@@ -2,7 +2,9 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 2.0.0 · **Ultima actualizare:** 2026-10-26
+**Versiune:** 2.1.0 · **Ultima actualizare:** 2026-10-27
+
+**Stare:** stabil · **Offline:** complet
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -58,7 +60,7 @@ Module lipite în `index.html`: `core`, `label`, `bundle`, `qr`, `ephem`, `ephem
 ## Confidențialitate și rețea
 
 - **Stocare:** doar `localStorage`, local în browser: `urme.gear` (bifele din lista de echipament) și `urme.sky` (două preferințe ale hărții cerului). Nu folosește `sessionStorage`, IndexedDB sau cookie-uri; poți șterge datele din „Transparență”.
-- **Rețea:** nu face nicio cerere de rețea (fără `fetch`, scripturi, fonturi, imagini sau hărți externe). Politica CSP din pagină blochează conexiunile externe. Singurul link extern este `tabara.asfan.online`, care se deschide doar dacă apeși pe el.
+- **Rețea:** nu face nicio cerere de rețea (fără `fetch`, scripturi, fonturi, imagini sau hărți externe). Politica CSP din pagină blochează conexiunile externe. Linkurile externe (`tabara.asfan.online` și sursele oficiale de mai jos) se deschid doar dacă apeși pe ele; aplicația însăși nu face nicio cerere către ele.
 - **Permisiuni:** nu cere nicio permisiune (nu folosește geolocalizare, cameră sau microfon). Aplicația nu îți urmărește poziția.
 - Nu există cont, telemetrie sau analiză de trafic.
 
@@ -76,7 +78,22 @@ Module lipite în `index.html`: `core`, `label`, `bundle`, `qr`, `ephem`, `ephem
 
 Descarcă `index.html` și deschide-l în browser; funcționează fără internet.
 
+## Export GPX din punctele tale
+
+În „Ghid pe teren”, butonul **Exportă GPX** descarcă un fișier GPX 1.1 construit **numai din datele aplicației: punctele pe care le-ai marcat tu** (poziție GPS citită la cerere). Fiecare punct cu poziție devine un `<wpt>` (nume = eticheta ta sau titlul fișei; descriere = fișa legată, raza de apropiere, precizia GPS, „vizitat”), iar punctele, în ordinea marcării, formează și o rută `<rte>`. Punctele fără poziție nu se exportă; nu există coordonate predefinite și niciun traseu „oficial”. Fișierul nu este o urmă (`<trk>`) înregistrată pe teren și **nu garantează** un traseu sigur sau marcat. Se generează local; nu se trimite nimic.
+
+## Hărți și surse oficiale (linkuri verificate)
+
+În secțiunea „Practic” sunt linkuri către surse oficiale, **verificate pe web la 27 octombrie 2026** (paginile s-au deschis și conțin conținutul descris; nu garantăm că rămân aceleași):
+
+- [Geoparcul UNESCO Ținutul Buzăului — Hărți și cărți](https://tinutulbuzaului.org/harti-si-carti/): hărți și ghiduri PDF gratuite, între care un ghid al așezărilor rupestre;
+- [Consiliul Județean Buzău — Vestigiile rupestre](https://cjbuzau.ro/vestigiile-rupestre/): prezentarea oficială a vestigiilor rupestre, inclusiv Aluniș;
+- Salvamont România (A.N.S.M.R.): [harta serviciilor](https://www.salvamontromania.ro/harta-salvamont.php), [repartiția teritorială](https://www.salvamontromania.ro/module.php?node=repartitie_teritoriala) și [aplicația Salvamont](https://www.salvamontromania.ro/aplicatia-salvamont.php) (alertă SOS cu poziția, doar pentru numere înregistrate în România).
+
+**Notă de siguranță:** la consultarea din 27 oct. 2026, lista pe județe din „Repartiție teritorială” nu includea un serviciu Salvamont pentru județul Buzău, iar presa locală ([Puterea.ro, 13 ian. 2024](https://www.puterea.ro/?p=306423)) relata că el nu fusese înființat. Nu presupune că există o echipă locală în apropiere; în caz de urgență sună **112**. **Nu am găsit o hartă oficială de trasee marcate** pentru zona Colți–Aluniș care să poată fi legată; ghidul rămâne neoficial, iar harta lui, schematică.
+
 ## Istoric / Changelog
+- **2.1.0 — 2026-10-27:** export **GPX** din punctele marcate de utilizator (Ghid pe teren); secțiune „Hărți și surse oficiale” cu 5 linkuri verificate pe web (Geoparcul Ținutul Buzăului, Consiliul Județean Buzău, Salvamont România) și notă de siguranță 112; linii Stare/Offline; CHANGELOG.md (anterior: v2.0.0).
 
 ### 1.2.6 — 2026-10-23
 - Planificatorul de zi: o oră de întoarcere după miezul nopții apare acum ca oră validă (de ex. 01:00), nu 25:00–26:00 sau 28:30; avertismentul «după apus» rămâne neschimbat.

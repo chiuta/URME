@@ -2,7 +2,9 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 2.0.0 · **Last updated:** 2026-10-26
+**Version:** 2.1.0 · **Last updated:** 2026-10-27
+
+**Status:** stable · **Offline:** complete
 
 Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -58,7 +60,7 @@ Modules pasted into `index.html`: `core`, `label`, `bundle`, `qr`, `ephem`, `eph
 ## Privacy and network
 
 - **Storage:** only `localStorage`, local to the browser: `urme.gear` (the equipment list check marks) and `urme.sky` (two sky chart preferences). It does not use `sessionStorage`, IndexedDB or cookies; you can delete the data from "Transparență".
-- **Network:** it makes no network requests (no `fetch`, scripts, fonts, images or external maps). The CSP in the page blocks external connections. The only external link is `tabara.asfan.online`, which opens only if you click it.
+- **Network:** it makes no network requests (no `fetch`, scripts, fonts, images or external maps). The CSP in the page blocks external connections. The external links (`tabara.asfan.online` and the official sources listed below) open only if you click them; the app itself makes no request to them.
 - **Permissions:** it requests no permissions (it does not use geolocation, camera or microphone). The app does not track your position.
 - There is no account, telemetry or traffic analytics.
 
@@ -76,7 +78,22 @@ Modules pasted into `index.html`: `core`, `label`, `bundle`, `qr`, `ephem`, `eph
 
 Download `index.html` and open it in a browser; it works without internet.
 
+## GPX export of your own points
+
+In “Field guide”, the **Export GPX** button downloads a GPX 1.1 file built **only from the app's own data: the points you marked yourself** (GPS position read on request). Each point with a position becomes a `<wpt>` (name = your label or the card title; description = linked card, approach radius, GPS accuracy, “visited”), and the points, in marking order, also form a `<rte>` route. Points without a position are not exported; there are no predefined coordinates and no “official” trail. The file is not a recorded track (`<trk>`) and **does not guarantee** a safe or marked route. It is generated locally; nothing is sent.
+
+## Official maps and sources (verified links)
+
+The “Practic” section has links to official sources, **checked on the web on 27 October 2026** (the pages opened and contain the described content; we cannot guarantee they stay the same):
+
+- [Buzău Land UNESCO Geopark — Maps and books](https://tinutulbuzaului.org/harti-si-carti/): free PDF maps and guides, including a guide to the rock-cut settlements;
+- [Buzău County Council — Rock-cut vestiges](https://cjbuzau.ro/vestigiile-rupestre/): the official presentation of the rock-cut vestiges, including Aluniș;
+- Salvamont România (A.N.S.M.R.): [service map](https://www.salvamontromania.ro/harta-salvamont.php), [territorial distribution](https://www.salvamontromania.ro/module.php?node=repartitie_teritoriala) and [the Salvamont app](https://www.salvamontromania.ro/aplicatia-salvamont.php) (SOS alert with your position, only for phone numbers registered in Romania).
+
+**Safety note:** when checked on 27 Oct 2026, the county list in “Repartiție teritorială” did not include a Salvamont service for Buzău County, and local press ([Puterea.ro, 13 Jan 2024](https://www.puterea.ro/?p=306423)) reported that it had not been set up. Do not assume a local team is nearby; in an emergency call **112**. **We did not find an official map of marked trails** for the Colți–Aluniș area that could be linked; the guide stays unofficial and its map schematic.
+
 ## History / Changelog
+- **2.1.0 — 2026-10-27:** **GPX** export of the user-marked points (Field guide); “Official maps and sources” section with 5 web-verified links (Buzău Land Geopark, Buzău County Council, Salvamont România) and a 112 safety note; Status/Offline lines; CHANGELOG.md (previous: v2.0.0).
 
 ### 1.2.6 — 2026-10-23
 - Day planner: a return time past midnight is now shown as a valid clock time (e.g. 01:00) instead of 25:00–26:00 or 28:30; the “after sunset” warning is unchanged.
