@@ -18,8 +18,8 @@
     "urme.lang",
     "urme.sky"
   ],
-  "sizeBytes": 1022982,
-  "sha256": "d6edbbe2adba540c2bd1b0ab6a9e4772b7a0c07750ac237a7a8550222bbfbb95",
+  "sizeBytes": 1119630,
+  "sha256": "25f7a807ccd43042a14fb2a80aee65a66d8beda4c43a4749dd12108037827738",
   "csp": {
     "present": true,
     "directives": {
@@ -64,6 +64,9 @@
       "label",
       "bundle",
       "qr",
+      "p2p",
+      "sync",
+      "history",
       "bridge",
       "ephem",
       "ephem"
@@ -78,6 +81,9 @@
       "label",
       "bundle",
       "qr",
+      "p2p",
+      "sync",
+      "history",
       "bridge",
       "ephem",
       "ephem"
