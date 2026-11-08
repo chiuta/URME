@@ -2,6 +2,10 @@
 
 Format: [SemVer](https://semver.org/lang/ro/) MAJOR.MINOR.PATCH.
 
+## 2.3.4 — 2026-11-08
+
+Note oneste noi în «Practic», în 8 limbi: data verificării informațiilor (27 oct. 2026 pentru linkuri/Salvamont; program muzeu nereverificat) și lipsa datelor verificate despre variante scurte/accesibile.
+
 ## 2.3.1 — 2026-11-03
 
 Etapa 4: jurnal de teren geolocalizat comun (plicul geo/journal, export GeoJSON/GPX), cu atlas în Arhiva fără frontiere
