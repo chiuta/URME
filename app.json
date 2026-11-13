@@ -2,8 +2,8 @@
   "schema": 1,
   "slug": "urme",
   "name": "' + xml(tr('pt', { i: i + 1, t: e.title, lat: e.lat, lon: e.lon })) + '",
-  "version": "2.3.7",
-  "updated": "2026-11-11",
+  "version": "2.3.8",
+  "updated": "2026-11-13",
   "description": "Ghid offline, detaliat, cu hartă, pentru o drumeție circulară pornind de la Aluniș Retreat: pădure, viețuitoare, plante de leac, chihlimbar, fosile și Ansamblul Rupestru Aluniș — Biserica din Piatră.",
   "egress": [],
   "permissions": [
@@ -20,8 +20,8 @@
     "urme.lang",
     "urme.sky"
   ],
-  "sizeBytes": 1234732,
-  "sha256": "b2e030712ff38ec395ea6d5e495b0e58a800dcb50fe5b3bc3b9fd3372f662033",
+  "sizeBytes": 1248309,
+  "sha256": "9e598f9badda3846a27467582e021d5ad785cc86609e46468a3c27a1c282f486",
   "csp": {
     "present": true,
     "directives": {
@@ -65,6 +65,7 @@
       "dialog",
       "exit",
       "view",
+      "ux",
       "label",
       "bundle",
       "qr",
@@ -77,13 +78,14 @@
     ]
   },
   "kit": {
-    "version": "1.4.0",
+    "version": "1.5.0",
     "modules": [
       "core",
       "store",
       "dialog",
       "exit",
       "view",
+      "ux",
       "label",
       "bundle",
       "qr",
