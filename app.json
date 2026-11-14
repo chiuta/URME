@@ -12,6 +12,7 @@
     "serviceWorker",
     "localStorage",
     "Web Crypto",
+    "WebGL",
     "BroadcastChannel"
   ],
   "storageKeys": [
@@ -20,13 +21,13 @@
     "urme.lang",
     "urme.sky"
   ],
-  "sizeBytes": 1248309,
-  "sha256": "9e598f9badda3846a27467582e021d5ad785cc86609e46468a3c27a1c282f486",
+  "sizeBytes": 1299949,
+  "sha256": "d1eae3ad25ef9d363b9253142996659c6902ad865808bef40050521a8d5a445c",
   "csp": {
     "present": true,
     "directives": {
       "default-src": "'none'",
-      "script-src": "sha256×7",
+      "script-src": "sha256×8",
       "style-src": "'unsafe-inline'",
       "img-src": "'self' data:",
       "font-src": "'none'",
