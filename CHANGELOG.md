@@ -2,6 +2,10 @@
 
 Format: [SemVer](https://semver.org/lang/ro/) MAJOR.MINOR.PATCH.
 
+## 2.3.9 — 2026-11-15
+
+- Nou: texturi fractale hiper-detaliate (fff-texturi 1.1.2) — fundalul și suprafețele mari (carduri, panouri, antete, butoane; filele și dialogurile ascunse la încărcare, când se deschid) primesc un material generat local (WebGL2, fără rețea și fără imagini), care se repetă fără cusătură; culorile aplicației rămân ale ei. Se oprește din dialogul „Transparență” sau cu `?notex=1`.
+
 ## 2.3.4 — 2026-11-08
 
 Note oneste noi în «Practic», în 8 limbi: data verificării informațiilor (27 oct. 2026 pentru linkuri/Salvamont; program muzeu nereverificat) și lipsa datelor verificate despre variante scurte/accesibile.
